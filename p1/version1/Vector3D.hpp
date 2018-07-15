@@ -79,25 +79,35 @@ class Vector3D
   // Producto vectorial
   Vector3D crossProduct(Vector3D const &v)const;
 
+  double productoMixto(Vector3D const &v,Vector3D const &w)const;
 
+  void sumConst(double k);
 
+  void sumVect(ed::Vector3D const &v);
 
-	// COMPLETAR
+  void mulConst(double k);
+
+  void mulVect(ed::Vector3D const &v);
+
 
     //! \name Operadores de la clase
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
-	Vector3D & operator=(Vector3D const &objeto);
+	Vector3D & operator=(Vector3D const &v);
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
-	bool operator == (Vector3D const &objeto) const;
+	bool operator == (Vector3D const &v) const;
 
 	// COMPLETAR EL RESTO DE OPERADORES
 
 
 	//! \name Funciones lectura y escritura de la clase Vector3D
 
-	// COMPLETAR
+  void leerVector3D();
+
+  void escribirVector3D();
+
+
 
 }; // Fin de la definición de la clase Vector3D
 

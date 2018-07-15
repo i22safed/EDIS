@@ -15,6 +15,9 @@
 
 #include "Vector3D.hpp"
 
+////////////////////////////////////////////////////////////////
+
+// CONSTRUCTORES
 
 ed::Vector3D::Vector3D(){
 	set1(0);
@@ -46,22 +49,6 @@ ed::Vector3D::Vector3D(ed::Vector3D const &v){
 
 }
 
-// MODIFICADORES
-
-void ed::Vector3D::set1(double x){
-	x_=x;
-	assert((std::abs(get1()-x)<COTA_ERROR));
-}
-
-void ed::Vector3D::set2(double y){
-	y_=y;
-	assert((std::abs(get2()-y)<COTA_ERROR));
-}
-
-void ed::Vector3D::set3(double z){
-	z_=z;
-	assert((std::abs(get3()-z)<COTA_ERROR));
-}
 
 ////////////////////////////////////////////////////////////////
 
@@ -166,32 +153,160 @@ ed::Vector3D ed::Vector3D::crossProduct(ed::Vector3D const &v)const{
 
 }
 
+double ed::Vector3D::productoMixto(Vector3D const &v,Vector3D const &w)const{
 
+	double pdtoMixto = dotProduct(v.crossProduct(w));
 
+	assert(std::abs(pdtoMixto-dotProduct(v.crossProduct(w)))<COTA_ERROR);
 
+	return pdtoMixto;
+
+}
+
+////////////////////////////////////////////////////////////////
+
+// MODIFICADORES
+
+void ed::Vector3D::set1(double x){
+	x_=x;
+	assert((std::abs(get1()-x)<COTA_ERROR));
+}
+
+void ed::Vector3D::set2(double y){
+	y_=y;
+	assert((std::abs(get2()-y)<COTA_ERROR));
+}
+
+void ed::Vector3D::set3(double z){
+	z_=z;
+	assert((std::abs(get3()-z)<COTA_ERROR));
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// OPERADORES
+// FUNCIONES DE MODIFICACION
 
-// COMPLETAR
+void ed::Vector3D::sumConst(double k){
+
+	Vector3D old(get1(),get2(),get3());
+
+	 set1(get1()+k);
+	 set2(get2()+k);
+	 set3(get3()+k);
+
+	 assert((std::abs(get1() - old.get1() + k) < COTA_ERROR)
+	 			and (std::abs(get2() - old.get2() + k) < COTA_ERROR)
+ 	 			and (std::abs(get3() - old.get3() + k) < COTA_ERROR));
+
+}
+
+void ed::Vector3D::sumVect(ed::Vector3D const &v){
+
+	Vector3D old(get1(),get2(),get3());
+
+	set1(get1()+v.get1());
+	set2(get2()+v.get2());
+	set3(get3()+v.get3());
+
+	assert((std::abs(get1()-old.get1()+v.get1())<COTA_ERROR)
+				and (std::abs(get1()-old.get1()+v.get1())<COTA_ERROR)
+				and (std::abs(get1()-old.get1()+v.get1())<COTA_ERROR));
+
+}
 
 
+void ed::Vector3D::mulConst(double k){
+
+	Vector3D old(get1(),get2(),get3());
+
+	 set1(get1()*k);
+	 set2(get2()*k);
+	 set3(get3()*k);
+
+	 assert((std::abs(get1() - old.get1() * k) < COTA_ERROR)
+				and (std::abs(get2() - old.get2() * k) < COTA_ERROR)
+				and (std::abs(get3() - old.get3() * k) < COTA_ERROR));
+
+}
+
+
+void ed::Vector3D::mulVect(ed::Vector3D const &v){
+
+	Vector3D old(get1(),get2(),get3());
+
+	set1(get1()*v.get1());
+	set2(get2()*v.get2());
+	set3(get3()*v.get3());
+
+	assert((std::abs(get1()-old.get1()*v.get1())<COTA_ERROR)
+				and (std::abs(get1()-old.get1()*v.get1())<COTA_ERROR)
+				and (std::abs(get1()-old.get1()*v.get1())<COTA_ERROR));
+
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 
 // FUNCIONES DE LECTURA Y ESCRITURA
 
-// COMPLETAR
+void ed::Vector3D::leerVector3D(){
 
+	double x=0.0,y=0.0,z=0.0;
+
+	std::cout << "\nX → ";
+	std::cin >> x;
+	set1(x);
+
+	std::cout << "\nY → ";
+	std::cin >> y;
+	set2(y);
+
+	std::cout << "\nZ → ";
+	std::cin >> z;
+	set3(z);
+
+}
+
+void ed::Vector3D::escribirVector3D(){
+
+	std::cout << "(" << get1() << ","<< get2() << "," << get3()<< ")" << std::endl;
+
+}
 
 ////////////////////////////////////////////////////////////////////////////////
-
 
 // Se incluyen los operadores sobrecargados dentro del espacio de nombres de ed
 
 namespace ed{
 
+// Operador de asignacion = / Asigna B → A
+Vector3D & Vector3D::operator=(Vector3D const &v){
+
+	if(this != &v){
+		set1(v.get1());
+		set2(v.get2());
+		set3(v.get3());
+
+		assert(this->get1()==v.get1()
+				and this->get2()==v.get2()
+				and this->get3()==v.get3());
+	}
+
+	return *this;
+
+}
+
+
+// Operador de igualdad == / true == → false !=
+bool Vector3D::operator == (ed::Vector3D const &v) const{
+
+	if(((get1()-v.get1())<COTA_ERROR)
+	and ((get2()-v.get2())<COTA_ERROR)
+	and ((get3()-v.get3())<COTA_ERROR)){
+		return true;
+	}else{
+		return false;
+	}
+};
 
 // Producto "por un" escalar (prefijo): k * v
 ed::Vector3D & operator* (double k, ed::Vector3D const & objeto)
