@@ -369,16 +369,33 @@ Vector3D Vector3D::operator-(){
 }
 
 
-
 // Producto "por un" escalar (prefijo): k * v
-ed::Vector3D & operator* (double k, ed::Vector3D const & objeto)
-{
-	ed::Vector3D *vectorResultado = new ed::Vector3D();
+ed::Vector3D & operator*(double k, ed::Vector3D const & v){
 
-	// COMPLETAR
+	ed::Vector3D * vectorResultado = new ed::Vector3D();
+
+	vectorResultado->set1(k*v.get1());
+	vectorResultado->set2(k*v.get2());
+	vectorResultado->set3(k*v.get3());
 
 	return *vectorResultado;
 }
+
+ed::Vector3D & operator*(ed::Vector3D const & v, double k){
+
+	ed::Vector3D *vectorResultado = new ed::Vector3D();
+
+	vectorResultado->set1(v.get1()*k);
+	vectorResultado->set2(v.get2()*k);
+	vectorResultado->set3(v.get3()*k);
+
+	assert(((vectorResultado->get1()-(v.get1()*k))<COTA_ERROR)
+	 	and ((vectorResultado->get2()-(v.get2()*k))<COTA_ERROR)
+		and ((vectorResultado->get3()-(v.get3()*k))<COTA_ERROR));
+
+	return * vectorResultado;
+}
+
 
 
 // Sobrecarga del operador de salida

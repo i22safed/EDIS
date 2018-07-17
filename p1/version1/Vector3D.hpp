@@ -57,7 +57,6 @@ class Vector3D
 	//! \name Observadores: funciones de consulta de Vector3D
 
   // Observadores de las componentes del Vector3D
-
   double  get1()const;
   double  get2()const;
   double  get3()const;
