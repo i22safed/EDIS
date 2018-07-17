@@ -278,6 +278,23 @@ void ed::Vector3D::escribirVector3D(){
 
 namespace ed{
 
+// Operador de igualdad == / true == → false !=
+bool Vector3D::operator == (ed::Vector3D const &v) const{
+
+	if(((get1()-v.get1())<COTA_ERROR)
+			and ((get2()-v.get2())<COTA_ERROR)
+			and ((get3()-v.get3())<COTA_ERROR)){
+
+		return true;
+
+	}else{
+
+		return false;
+
+	}
+}
+
+
 // Operador de asignacion = / Asigna B → A
 Vector3D & Vector3D::operator=(Vector3D const &v){
 
@@ -295,18 +312,63 @@ Vector3D & Vector3D::operator=(Vector3D const &v){
 
 }
 
+Vector3D Vector3D::operator+(Vector3D const &v){
 
-// Operador de igualdad == / true == → false !=
-bool Vector3D::operator == (ed::Vector3D const &v) const{
+	Vector3D vectorSuma(0,0,0);
 
-	if(((get1()-v.get1())<COTA_ERROR)
-	and ((get2()-v.get2())<COTA_ERROR)
-	and ((get3()-v.get3())<COTA_ERROR)){
-		return true;
-	}else{
-		return false;
-	}
-};
+	vectorSuma.set1(get1()+v.get1());
+	vectorSuma.set2(get2()+v.get2());
+	vectorSuma.set3(get3()+v.get3());
+
+	assert(((vectorSuma.get1()-get1()-v.get1()) < COTA_ERROR)
+				and ((vectorSuma.get2()-get2()-v.get2()) < COTA_ERROR)
+				and ((vectorSuma.get3()-get3()-v.get3()) < COTA_ERROR));
+
+	return vectorSuma;
+
+}
+
+Vector3D Vector3D::operator+(){
+
+	Vector3D vectorCopia(get1(),get2(),get3());
+
+	assert(((vectorCopia.get1()-get1()) < COTA_ERROR)
+		and ((vectorCopia.get2()-get2()) < COTA_ERROR)
+		and ((vectorCopia.get3()-get3()) < COTA_ERROR));
+
+		return vectorCopia;
+
+}
+
+Vector3D Vector3D::operator-(Vector3D const &v){
+
+	Vector3D vectorSuma(0,0,0);
+
+	vectorSuma.set1(get1()-v.get1());
+	vectorSuma.set2(get2()-v.get2());
+	vectorSuma.set3(get3()-v.get3());
+
+	assert(((std::abs((vectorSuma.get1()+v.get1())-get1())) < COTA_ERROR)
+				and ((std::abs((vectorSuma.get2()+v.get2())-get2())) < COTA_ERROR)
+				and ((std::abs((vectorSuma.get3()+v.get3())-get3())) < COTA_ERROR));
+
+	return vectorSuma;
+
+}
+
+Vector3D Vector3D::operator-(){
+
+	Vector3D vectorCopia(-get1(),-get2(),-get3());
+
+	assert(((vectorCopia.get1()+get1()) < COTA_ERROR)
+		and ((vectorCopia.get2()+get2()) < COTA_ERROR)
+		and ((vectorCopia.get3()+get3()) < COTA_ERROR));
+
+		return vectorCopia;
+
+}
+
+
 
 // Producto "por un" escalar (prefijo): k * v
 ed::Vector3D & operator* (double k, ed::Vector3D const & objeto)
