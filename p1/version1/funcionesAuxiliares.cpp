@@ -82,7 +82,7 @@ void ed::leerVectores(ed::Vector3D &u, ed::Vector3D &v, ed::Vector3D &w)
 
  // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 
-/*
+
 	// Usando la función de la clase
 	std::cout << BIGREEN << "Lectura de u usando la función leerVector" << RESET << std::endl;
 	std::cout << BIYELLOW << "u.leerVector() " << RESET << std::endl;
@@ -102,7 +102,7 @@ void ed::leerVectores(ed::Vector3D &u, ed::Vector3D &v, ed::Vector3D &w)
 	std::cout << "w = ";
 	std::cin >> w;
 
-*/
+
 
  	return;
 }
@@ -112,7 +112,7 @@ void ed::leerVectores(ed::Vector3D &u, ed::Vector3D &v, ed::Vector3D &w)
 void ed::escribirVectores(ed::Vector3D const &u, ed::Vector3D const &v, ed::Vector3D const &w)
 {
  // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-/*
+
 	// Usando la función de la clase
 	std::cout  << BIYELLOW << "u = "  << RESET ;
 	u.escribirVector3D();
@@ -121,7 +121,7 @@ void ed::escribirVectores(ed::Vector3D const &u, ed::Vector3D const &v, ed::Vect
 	// Usando la sobrecarga del operador >>
 	std::cout  << BIYELLOW << "v = " << RESET  << v << std::endl;
 	std::cout  << BIYELLOW << "w = " << RESET << w << std::endl;
-*/
+
  	return;
 }
 
@@ -131,7 +131,7 @@ void ed::escribirVectores(ed::Vector3D const &u, ed::Vector3D const &v, ed::Vect
 void ed::observadoresDeVectores(ed::Vector3D const &u, ed::Vector3D const &v)
 {
  // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-/*
+
 	// Usando la función de la clase
 	std::cout  << BIYELLOW << "u = "  << RESET ;
 	u.escribirVector3D();
@@ -206,7 +206,7 @@ void ed::observadoresDeVectores(ed::Vector3D const &u, ed::Vector3D const &v)
 		std::cout << BIYELLOW << "v = " << RESET << v << std::endl;
 	}
 
-*/
+
 
  	return;
 }
@@ -216,7 +216,7 @@ void ed::observadoresDeVectores(ed::Vector3D const &u, ed::Vector3D const &v)
 void ed::modificarVector(ed::Vector3D &u, ed::Vector3D const &v, double k)
 {
  // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-/*
+
    	std::cout << BIBLUE;
   	std::cout << "Modificaciones del vector " << std::endl;
 	std::cout << RESET;
@@ -272,7 +272,7 @@ void ed::modificarVector(ed::Vector3D &u, ed::Vector3D const &v, double k)
 
   	std::cout << BIGREEN << "Nuevo valor de u = " << RESET  << u
 			  << std::endl << std::endl;
-*/
+
 
 }
 
@@ -282,7 +282,7 @@ void ed::mostrarProductoEscalar(ed::Vector3D const &u, ed::Vector3D const &v)
 {
  // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 
-/*
+
 	std::cout << BIBLUE;
 	std::cout << "Producto escalar de dos vectores u y v " << std::endl << std::endl;
 	std::cout << RESET;
@@ -295,7 +295,7 @@ void ed::mostrarProductoEscalar(ed::Vector3D const &u, ed::Vector3D const &v)
 
 	std::cout << BIGREEN << "Usando el operador: u * v " << RESET << std::endl;
 	std::cout << u << BIYELLOW << " * "  << RESET << v << " = " <<  u * v << std::endl  << std::endl;
-*/
+
 	return;
 }
 
@@ -308,7 +308,7 @@ void ed::mostrarProductoVectorial(ed::Vector3D const &u, ed::Vector3D const &v)
 {
  // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 
- /*
+
 	// Se comprueba si no son nulos ni paralelos
 	if ( (u.modulo() != 0.0) and  (v.modulo() != 0.0) and (u.angulo(v) > 0.0))
 	{
@@ -341,7 +341,7 @@ void ed::mostrarProductoVectorial(ed::Vector3D const &u, ed::Vector3D const &v)
 		std::cout << BIYELLOW << "u = " << RESET << u << std::endl;
 		std::cout << BIYELLOW << "v = " << RESET << v << std::endl;
 	}
-*/
+
 
 	return;
 }
@@ -353,7 +353,7 @@ void ed::mostrarProductoMixto(ed::Vector3D const &u, ed::Vector3D const &v, ed::
 {
  // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 
-/*
+
 	// Se comprueba si no son nulos v y w ni paralelos
 	if ( (v.modulo() != 0.0) and  (w.modulo() != 0.0) and (v.angulo(w) > 0.0))
 	{
@@ -369,7 +369,7 @@ void ed::mostrarProductoMixto(ed::Vector3D const &u, ed::Vector3D const &v, ed::
 		std::cout << BIYELLOW << "v = " << RESET << v << std::endl;
 		std::cout << BIYELLOW << "w = " << RESET << w << std::endl;
 	}
-*/
+
 
 	return;
 }
@@ -379,7 +379,7 @@ void ed::mostrarProductoMixto(ed::Vector3D const &u, ed::Vector3D const &v, ed::
 
 void ed::mostrarOperadores(ed::Vector3D const &u, ed::Vector3D const &v, ed::Vector3D &w,  double k)
 {
- /*
+
 	std::cout << BIGREEN;
 	std::cout << "Operador de igualdad == " << std::endl;
 	std::cout << RESET;
@@ -453,7 +453,7 @@ void ed::mostrarOperadores(ed::Vector3D const &u, ed::Vector3D const &v, ed::Vec
 
 	std::cout << "\t" << BIYELLOW << u << " * " << k << " = " << RESET << (u * k) << std::endl;
 	std::cout << std::endl;
-*/
+
 
 	return;
 }

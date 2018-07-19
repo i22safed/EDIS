@@ -68,7 +68,7 @@ double  ed::Vector3D::get3()const{
 
 double ed::Vector3D::modulo()const{
 
-	double modulo = sqrt(get1()*get1() + get2()*get2() + get3()*get3());
+	double modulo = std::sqrt(get1()*get1() + get2()*get2() + get3()*get3());
 	assert(std::abs(modulo-sqrt(get1()*get1()
 												+ get2()*get2()
 												+ get3()*get3()))<COTA_ERROR);
@@ -83,7 +83,15 @@ double ed::Vector3D::angulo(ed::Vector3D const &v)const{
 
 	double angulo = acos(dotProduct(v)/(modulo())*(v.modulo()));
 
-	assert(std::abs(angulo - acos(dotProduct(v)/(modulo())*(v.modulo())))<COTA_ERROR);
+	if(angulo > 1){
+		angulo = 1;
+	}
+	if(angulo < -1){
+		angulo = -1;
+	}
+	if((angulo > -1)and(angulo < 1)){
+		assert(std::abs(angulo - acos(dotProduct(v)/(modulo())*(v.modulo())))<COTA_ERROR);
+	}
 
 	return angulo;
 
@@ -194,9 +202,9 @@ void ed::Vector3D::sumConst(double k){
 	 set2(get2()+k);
 	 set3(get3()+k);
 
-	 assert((std::abs(get1() - old.get1() + k) < COTA_ERROR)
-	 			and (std::abs(get2() - old.get2() + k) < COTA_ERROR)
- 	 			and (std::abs(get3() - old.get3() + k) < COTA_ERROR));
+	 assert((std::abs(get1() - (old.get1() + k)) < COTA_ERROR)
+	 			and (std::abs(get2() - (old.get2() + k)) < COTA_ERROR)
+ 	 			and (std::abs(get3() - (old.get3() + k)) < COTA_ERROR));
 
 }
 
@@ -208,14 +216,14 @@ void ed::Vector3D::sumVect(ed::Vector3D const &v){
 	set2(get2()+v.get2());
 	set3(get3()+v.get3());
 
-	assert((std::abs(get1()-old.get1()+v.get1())<COTA_ERROR)
-				and (std::abs(get1()-old.get1()+v.get1())<COTA_ERROR)
-				and (std::abs(get1()-old.get1()+v.get1())<COTA_ERROR));
+	assert((std::abs(get1()-(old.get1()+v.get1()))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()+v.get1()))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()+v.get1()))<COTA_ERROR));
 
 }
 
 
-void ed::Vector3D::mulConst(double k){
+void ed::Vector3D::multConst(double k){
 
 	Vector3D old(get1(),get2(),get3());
 
@@ -230,7 +238,7 @@ void ed::Vector3D::mulConst(double k){
 }
 
 
-void ed::Vector3D::mulVect(ed::Vector3D const &v){
+void ed::Vector3D::multVect(ed::Vector3D const &v){
 
 	Vector3D old(get1(),get2(),get3());
 
@@ -266,9 +274,9 @@ void ed::Vector3D::leerVector3D(){
 
 }
 
-void ed::Vector3D::escribirVector3D(){
+void ed::Vector3D::escribirVector3D()const{
 
-	std::cout << "(" << get1() << ","<< get2() << "," << get3()<< ")" << std::endl;
+	std::cout << "(" << this->get1() << ","<< this->get2() << "," << this->get3()<< ")" << std::endl;
 
 }
 
@@ -281,9 +289,9 @@ namespace ed{
 // Operador de igualdad == / true == → false !=
 bool Vector3D::operator == (ed::Vector3D const &v) const{
 
-	if(((get1()-v.get1())<COTA_ERROR)
-			and ((get2()-v.get2())<COTA_ERROR)
-			and ((get3()-v.get3())<COTA_ERROR)){
+	if((std::abs(get1()-v.get1())<COTA_ERROR)
+			and (std::abs(get2()-v.get2())<COTA_ERROR)
+			and (std::abs(get3()-v.get3())<COTA_ERROR)){
 
 		return true;
 
@@ -312,7 +320,7 @@ Vector3D & Vector3D::operator=(Vector3D const &v){
 
 }
 
-Vector3D Vector3D::operator+(Vector3D const &v){
+Vector3D Vector3D::operator+(Vector3D const &v)const{
 
 	Vector3D vectorSuma(0,0,0);
 
@@ -320,27 +328,27 @@ Vector3D Vector3D::operator+(Vector3D const &v){
 	vectorSuma.set2(get2()+v.get2());
 	vectorSuma.set3(get3()+v.get3());
 
-	assert(((vectorSuma.get1()-get1()-v.get1()) < COTA_ERROR)
-				and ((vectorSuma.get2()-get2()-v.get2()) < COTA_ERROR)
-				and ((vectorSuma.get3()-get3()-v.get3()) < COTA_ERROR));
+	assert((std::abs(vectorSuma.get1()-get1()-v.get1()) < COTA_ERROR)
+				and (std::abs(vectorSuma.get2()-get2()-v.get2()) < COTA_ERROR)
+				and (std::abs(vectorSuma.get3()-get3()-v.get3()) < COTA_ERROR));
 
 	return vectorSuma;
 
 }
 
-Vector3D Vector3D::operator+(){
+Vector3D Vector3D::operator+()const{
 
 	Vector3D vectorCopia(get1(),get2(),get3());
 
-	assert(((vectorCopia.get1()-get1()) < COTA_ERROR)
-		and ((vectorCopia.get2()-get2()) < COTA_ERROR)
-		and ((vectorCopia.get3()-get3()) < COTA_ERROR));
+	assert((std::abs(vectorCopia.get1()-get1()) < COTA_ERROR)
+		and (std::abs(vectorCopia.get2()-get2()) < COTA_ERROR)
+		and (std::abs(vectorCopia.get3()-get3()) < COTA_ERROR));
 
 		return vectorCopia;
 
 }
 
-Vector3D Vector3D::operator-(Vector3D const &v){
+Vector3D Vector3D::operator-(Vector3D const &v)const{
 
 	Vector3D vectorSuma(0,0,0);
 
@@ -356,23 +364,61 @@ Vector3D Vector3D::operator-(Vector3D const &v){
 
 }
 
-Vector3D Vector3D::operator-(){
+Vector3D Vector3D::operator-()const{
 
 	Vector3D vectorCopia(-get1(),-get2(),-get3());
 
-	assert(((vectorCopia.get1()+get1()) < COTA_ERROR)
-		and ((vectorCopia.get2()+get2()) < COTA_ERROR)
-		and ((vectorCopia.get3()+get3()) < COTA_ERROR));
+	assert((std::abs(vectorCopia.get1()+get1()) < COTA_ERROR)
+		and (std::abs(vectorCopia.get2()+get2()) < COTA_ERROR)
+		and (std::abs(vectorCopia.get3()+get3()) < COTA_ERROR));
 
 		return vectorCopia;
 
 }
 
+Vector3D Vector3D::operator*(double k)const{
+
+	Vector3D v(get1()*k,get2()*k,get3()*k);
+
+	assert((std::abs(v.get1()-(get1()*k))<COTA_ERROR)
+	and (std::abs(v.get1()-(get1()*k))<COTA_ERROR)
+	and (std::abs(v.get1()-(get1()*k))<COTA_ERROR));
+
+	return v;
+
+}
+
+double Vector3D::operator*(Vector3D const &v)const{
+
+	double valorDevuelto = (get1()*v.get1()+get2()*v.get2()+get3()*v.get3());
+
+	assert((valorDevuelto-(get1()*v.get1()+get2()*v.get2()+get3()*v.get3()))<COTA_ERROR);
+
+	return valorDevuelto;
+}
+
+// Producto vectorial de dos vector.
+Vector3D Vector3D::operator ^(Vector3D const &v)const{
+
+	Vector3D w(get2()*v.get3()-get3()*v.get2(),
+							-get1()*v.get3()+get3()*v.get1(),
+							get1()*v.get2()-get2()*v.get1());
+
+	assert(dotProduct(w) == 0);
+	assert(v.dotProduct(w) == 0);
+	assert((w.modulo() - (modulo()*v.modulo()*std::sin(angulo(v))))<COTA_ERROR);
+
+	return w;
+
+}
+
+
+// FUNCIONES EXTERNAS //////////////////////////////////////////////
 
 // Producto "por un" escalar (prefijo): k * v
-ed::Vector3D & operator*(double k, ed::Vector3D const & v){
+Vector3D & operator*(double k, Vector3D const & v){
 
-	ed::Vector3D * vectorResultado = new ed::Vector3D();
+	Vector3D * vectorResultado = new ed::Vector3D();
 
 	vectorResultado->set1(k*v.get1());
 	vectorResultado->set2(k*v.get2());
@@ -381,38 +427,29 @@ ed::Vector3D & operator*(double k, ed::Vector3D const & v){
 	return *vectorResultado;
 }
 
-ed::Vector3D & operator*(ed::Vector3D const & v, double k){
-
-	ed::Vector3D *vectorResultado = new ed::Vector3D();
-
-	vectorResultado->set1(v.get1()*k);
-	vectorResultado->set2(v.get2()*k);
-	vectorResultado->set3(v.get3()*k);
-
-	assert(((vectorResultado->get1()-(v.get1()*k))<COTA_ERROR)
-	 	and ((vectorResultado->get2()-(v.get2()*k))<COTA_ERROR)
-		and ((vectorResultado->get3()-(v.get3()*k))<COTA_ERROR));
-
-	return * vectorResultado;
-}
-
-
-
 // Sobrecarga del operador de salida
 // Se escriben por pantalla las coordenadas del vector 3D  de la forma (v1, v2, v3)
-ostream &operator<<(ostream &stream, ed::Vector3D const &objeto)
-{
-	// COMPLETAR
+ostream &operator<<(ostream &o, Vector3D const &v){
 
-  return stream;
+	o << "(" << v.get1() <<","<< v.get2()<< "," <<v.get3()<< ")";
+
+  return o;
 }
 
 // Sobrecarga del operador de entrada
-istream &operator>>(istream &stream, ed::Vector3D &objeto)
-{
-  // COMPLETAR
+istream &operator>>(istream &i, Vector3D &v){
 
-  return stream;
+	double v1,v2,v3;
+
+	std::cout << "Introduzca los valores para (a,b,c): ";
+	i >> v1 >> v2 >> v3;
+	i.ignore();
+
+	v.set1(v1);
+	v.set2(v2);
+	v.set3(v3);
+
+  return i;
 }
 
 } // Fin del espacio de nombres ed

@@ -88,37 +88,45 @@ class Vector3D
   void sumVect(ed::Vector3D const &v);
 
   // Multiplicacion de vector por constante k (x*k,y*k,z*k)
-  void mulConst(double k);
+  void multConst(double k);
 
   // Multiplicacion de un vector por otro (x1*x2,y1*y2,z1*z2)
-  void mulVect(ed::Vector3D const &v);
+  void multVect(ed::Vector3D const &v);
 
 
     //! \name Operadores de la clase
 
   // Operador de igualdad ==
-  bool operator == (Vector3D const &v) const;
+  bool operator == (Vector3D const &v)const;
 
 	// Operador de asignación =
 	Vector3D & operator=(Vector3D const &v);
 
 	// Operador + binario
-  Vector3D operator+(Vector3D const &v);
+  Vector3D operator+(Vector3D const &v)const;
 
   // Operador + unario
-  Vector3D operator+();
+  Vector3D operator+()const;
 
   // Operador - binario
-  Vector3D operator-(Vector3D const &v);
+  Vector3D operator-(Vector3D const &v)const;
 
   // Operador - unario
-  Vector3D operator-();
+  Vector3D operator-()const;
+
+  // Operando * vector por k
+  Vector3D operator*(double k)const;
+
+  // Producto escalar de 2 vectores
+  double operator*(Vector3D const &v)const;
+
+  Vector3D operator^(Vector3D const &v)const;
 
 	//! \name Funciones lectura y escritura de la clase Vector3D
 
   void leerVector3D();
 
-  void escribirVector3D();
+  void escribirVector3D()const;
 
 
 
@@ -132,7 +140,6 @@ class Vector3D
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
     Vector3D & operator* (double k, Vector3D const & objeto);
-
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
     istream &operator>>(istream &stream, Vector3D &objeto);

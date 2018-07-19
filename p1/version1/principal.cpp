@@ -20,7 +20,7 @@
 
 #include "macros.hpp"
 
-/*! 
+/*!
 	\brief   Función principal de la práctica 1
 	\return  int
 */
@@ -30,7 +30,7 @@ int main()
  // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 
 
-/*
+
 	// Uso del constructor parametrizado con valores
 	ed::Vector3D u(1,2,3);
 
@@ -41,14 +41,14 @@ int main()
 	ed::Vector3D w;
 
 	double k = 2;
-*/
+
 	int opcion;
 
 
 	do{
 
 		// Se elige la opción del menún
-		opcion = ed::menu();		
+		opcion = ed::menu();
 
 		std::cout << CLEAR_SCREEN;
 		PLACE(3,1);
@@ -56,109 +56,109 @@ int main()
 		// Se ejecuta la opción del menú elegida
 		switch(opcion)
 		{
-			case 0: 
+			case 0:
 				PLACE(25,1);
 				std::cout << BRED;
 				std::cout << "[0] Fin del programa" << std::endl << std::endl;
 				std::cout << RESET;
 			break;
 
-			case 1: 
+			case 1:
 			   	std::cout << BIBLUE;
 				std::cout << "[1] Leer vectores" << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-//				ed::leerVectores(u,v,w);
+				ed::leerVectores(u,v,w);
 
 				break;
 
-			case 2: 
+			case 2:
 			   	std::cout << BIBLUE;
 				std::cout << "[2] Leer número escalar " << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-//				std::cout << "k = "; 
-//				std::cin >> k;
+				std::cout << "k = ";
+				std::cin >> k;
 
 				break;
 
 
-			case 3: 
+			case 3:
 			   	std::cout << BIBLUE;
 				std::cout << "[3] Escribir número y vectores " << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				// Número escalar
-//				std::cout  << BIYELLOW << "k = " << RESET << k << std::endl;
+				std::cout  << BIYELLOW << "k = " << RESET << k << std::endl;
 
 				// Vectores
-//				ed::escribirVectores(u,v,w);
+				ed::escribirVectores(u,v,w);
 
 				break;
 
 
-			case 4: 
+			case 4:
 			   	std::cout << BIBLUE;
 				std::cout << "[4] Observadores de los vectores: módulos y ángulos " << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-//				ed::observadoresDeVectores(u,v);
+				ed::observadoresDeVectores(u,v);
 
 				break;
 
-			case 5: 
+			case 5:
 			   	std::cout << BIBLUE;
-			  	std::cout << "[5] Modificación del vector \"u\" usando v y k " << std::endl; 
+			  	std::cout << "[5] Modificación del vector \"u\" usando v y k " << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-//				ed::modificarVector(u,v,k);
+				ed::modificarVector(u,v,k);
 
 				break;
 
-			case 6: 
+			case 6:
 			   	std::cout << BIBLUE;
 				std::cout << "[6] Producto escalar de u y v " << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-//				ed::mostrarProductoEscalar(u,v);
+				ed::mostrarProductoEscalar(u,v);
 
 				break;
 
 
-			case 7: 
+			case 7:
 			   	std::cout << BIBLUE;
 				std::cout << "[7] Producto vectorial de u y v " << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-//				ed::mostrarProductoVectorial(u,v);
+				ed::mostrarProductoVectorial(u,v);
 
 				break;
 
 
-			case 8: 
+			case 8:
 			   	std::cout << BIBLUE;
-			  	std::cout << "[8] Producto mixto de tres vectores  u * (v ^ w) " << std::endl; 
+			  	std::cout << "[8] Producto mixto de tres vectores  u * (v ^ w) " << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-//				ed::mostrarProductoMixto(u,v,w);
+				ed::mostrarProductoMixto(u,v,w);
 
 				break;
 
-			case 9: 
+			case 9:
 			   	std::cout << BIBLUE;
 				std::cout << "[9] Mostrar el uso de los operadores con u y v (se modifica w)" << std::endl;
 				std::cout << RESET;
 
 // QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-//				ed::mostrarOperadores(u,v,w,k);
+				ed::mostrarOperadores(u,v,w,k);
 
 				break;
 
@@ -171,7 +171,7 @@ int main()
 				std::cout << opcion << std::endl;
 				std::cout << RESET;
      }
-  
+
     if (opcion !=0)
     {
 		PLACE(25,1);
@@ -181,7 +181,7 @@ int main()
 		std::cout << RESET;
 		std::cout << " para mostrar el ";
 		std::cout << BIGREEN ;
-		std::cout << "menú: "; 
+		std::cout << "menú: ";
 		std::cout << RESET;
 		// Pausa
 		std::cin.ignore();
@@ -192,5 +192,3 @@ int main()
 
 	return 0;
 }
-
-
