@@ -6,13 +6,10 @@
 
 // Ficheros de cabecera
 #include <iostream>
-
 // Para usar sqrt, acos
 #include <cmath>
-
 // Para controlar las pre y post condiciones mediante asertos
 #include <cassert>
-
 #include "Vector3D.hpp"
 
 ////////////////////////////////////////////////////////////////
