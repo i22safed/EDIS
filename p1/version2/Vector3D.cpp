@@ -125,6 +125,89 @@ double ed::Vector3D::gamma(){
 
 }
 
+ed::Vector3D ed::Vector3D::crossProduct(ed::Vector3D v){
+
+	ed::Vector3D w(0.0,0.0,0.0);
+
+		w.set1(get2()*v.get3()-get3()*get2());
+		w.set2(-get1()*v.get3( )+get3()*get2());
+		w.set3(get1()*v.get2()-get2()*get1());
+
+		assert(dotProduct(w)<COTA_ERROR);		// Pdto escalar de u*w == 0
+		assert(v.dotProduct(w)<COTA_ERROR);	// Pdto escalar de v*w == 0
+		assert((w.modulo()-(modulo()*v.modulo()*sin(angulo(v))))<COTA_ERROR);
+
+		return w;
+
+}
+
+double ed::Vector3D::productoMixto(ed::Vector3D v, ed::Vector3D w){
+
+	double valorDevuelto = dotProduct(v.crossProduct(w));
+
+	assert((valorDevuelto-(dotProduct(v.crossProduct(w))))<COTA_ERROR);
+
+	return valorDevuelto;
+
+}
+
+// Operaciones de modificación de las componentes del vector
+
+void ed::Vector3D::sumConst(double k){
+
+	ed::Vector3D old(get1(),get2(),get3());
+
+	set1(get1()+k);
+	set2(get2()+k);
+	set3(get3()+k);
+
+	assert((std::abs(get1()-(old.get1()+k))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()+k))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()+k))<COTA_ERROR));
+
+}
+
+void ed::Vector3D::sumVect(Vector3D v){
+
+	ed::Vector3D old(get1(),get2(),get3());
+
+	set1(get1()+v.get1());
+	set2(get2()+v.get2());
+	set3(get3()+v.get3());
+
+	assert((std::abs(get1()-(old.get1()+v.get1()))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()+v.get2()))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()+v.get3()))<COTA_ERROR));
+
+}
+
+void ed::Vector3D::multConst(double k){
+
+	ed::Vector3D old(get1(),get2(),get3());
+
+	set1(get1()*k);
+	set2(get2()*k);
+	set3(get3()*k);
+
+	assert((std::abs(get1()-(old.get1()*k))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()*k))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()*k))<COTA_ERROR));
+
+}
+
+void ed::Vector3D::multVect(Vector3D v){
+
+	ed::Vector3D old(get1(),get2(),get3());
+
+	set1(get1()*v.get1());
+	set2(get2()*v.get2());
+	set3(get3()*v.get3());
+
+	assert((std::abs(get1()-(old.get1()*v.get1()))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()*v.get2()))<COTA_ERROR)
+				and (std::abs(get1()-(old.get1()*v.get3()))<COTA_ERROR));
+
+}
 
 ////////////////////////////////////////////////////////////////
 

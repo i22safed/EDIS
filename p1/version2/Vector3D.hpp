@@ -71,6 +71,19 @@ class Vector3D
 
   double dotProduct(Vector3D const &v);
 
+  Vector3D crossProduct(Vector3D v);
+
+  double productoMixto(Vector3D v, Vector3D w);
+
+  void sumConst(double k);
+
+  void sumVect(Vector3D v);
+
+  void multConst(double k);
+
+  void multVect(Vector3D v);
+
+
     //! \name Operadores de la clase
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
