@@ -58,46 +58,62 @@ class Vector3D
   void set2(double v2);
   void set3(double v3);
 
-  double modulo();
+  double modulo()const;
 
-  double angulo(Vector3D v);
+  double angulo(ed::Vector3D const &v)const;
 
-  double alfa();
+  double alfa()const;
 
-  double beta();
+  double beta()const;
 
-  double gamma();
+  double gamma()const;
 
 
-  double dotProduct(Vector3D const &v);
+  double dotProduct(ed::Vector3D const &v)const;
 
-  Vector3D crossProduct(Vector3D v);
+  Vector3D crossProduct(ed::Vector3D const &v)const;
 
-  double productoMixto(Vector3D v, Vector3D w);
+  double productoMixto(ed::Vector3D const &v, ed::Vector3D const &w)const;
 
   void sumConst(double k);
 
-  void sumVect(Vector3D v);
+  void sumVect(ed::Vector3D const &v);
 
   void multConst(double k);
 
-  void multVect(Vector3D v);
+  void multVect(ed::Vector3D const &v);
 
+  void leerVector3D();
+
+  void escribirVector3D()const;
 
     //! \name Operadores de la clase
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
-	Vector3D & operator=(Vector3D const &objeto);
 
-	// COMPLETAR COMENTARIOS DE DOXYGEN
-	bool operator == (Vector3D const &objeto) const;
+  bool operator == (Vector3D const &v)const;
 
-	// COMPLETAR EL RESTO DE OPERADORES
+  Vector3D & operator=(Vector3D const &v);
 
+  Vector3D operator+(Vector3D const &v)const;
 
-	//! \name Funciones lectura y escritura de la clase Vector3D
+  Vector3D operator+()const;
+
+  Vector3D operator-(Vector3D const &v)const;
+
+  Vector3D operator-()const;
+
+  Vector3D operator*(double k)const;
+
+  double operator*(Vector3D const &v)const;
+
+  Vector3D operator^(Vector3D const &v)const;
+
 
 	// COMPLETAR
+
+  //! \name Funciones lectura y escritura de la clase Vector3D
+
 
 }; // Fin de la definición de la clase Vector3D
 
@@ -107,14 +123,14 @@ class Vector3D
 //! \name Funciones que utilizan un objetos de la clase Vector3D, pero que no pertenecen a la clase Vector3D
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
-    Vector3D & operator* (double k, Vector3D const & objeto);
+    Vector3D & operator* (double k, Vector3D const & v);
 
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
-    istream &operator>>(istream &stream, Vector3D &objeto);
+    istream &operator>>(istream &i, Vector3D &v);
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
-	ostream &operator<<(ostream &stream, Vector3D const &objeto);
+	ostream &operator<<(ostream &o, Vector3D const &v);
 
 
 } // \brief Fin de namespace ed.
