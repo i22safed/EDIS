@@ -48,7 +48,6 @@ ed::Vector3D::Vector3D(ed::Vector3D const &v){
 
 
 ////////////////////////////////////////////////////////////////
-
 // OBSERVADORES
 
 double  ed::Vector3D::get1()const{
@@ -109,11 +108,8 @@ double ed::Vector3D::dotProduct(ed::Vector3D const &v)const{
 double ed::Vector3D::alfa()const{
 
 	assert(modulo()>0);
-
 	double anguloAlfa = angulo(Vector3D(1,0,0));
-
 	assert((anguloAlfa - angulo(Vector3D(1,0,0)))<COTA_ERROR);
-
 	return anguloAlfa;
 
 }
@@ -121,11 +117,8 @@ double ed::Vector3D::alfa()const{
 double ed::Vector3D::beta()const{
 
 	assert(modulo()>0);
-
 	double anguloBeta = angulo(Vector3D(0,1,0));
-
 	assert((anguloBeta - angulo(Vector3D(0,1,0)))<COTA_ERROR);
-
 	return anguloBeta;
 
 }
@@ -133,11 +126,8 @@ double ed::Vector3D::beta()const{
 double ed::Vector3D::gamma()const{
 
 	assert(modulo()>0);
-
 	double anguloGamma = angulo(Vector3D(0,0,1));
-
 	assert((anguloGamma - angulo(Vector3D(0,0,1)))<COTA_ERROR);
-
 	return anguloGamma;
 
 }
@@ -161,9 +151,7 @@ ed::Vector3D ed::Vector3D::crossProduct(ed::Vector3D const &v)const{
 double ed::Vector3D::productoMixto(Vector3D const &v,Vector3D const &w)const{
 
 	double pdtoMixto = dotProduct(v.crossProduct(w));
-
 	assert(std::abs(pdtoMixto-dotProduct(v.crossProduct(w)))<COTA_ERROR);
-
 	return pdtoMixto;
 
 }
@@ -388,9 +376,7 @@ Vector3D Vector3D::operator*(double k)const{
 double Vector3D::operator*(Vector3D const &v)const{
 
 	double valorDevuelto = (get1()*v.get1()+get2()*v.get2()+get3()*v.get3());
-
 	assert((valorDevuelto-(get1()*v.get1()+get2()*v.get2()+get3()*v.get3()))<COTA_ERROR);
-
 	return valorDevuelto;
 }
 

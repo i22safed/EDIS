@@ -6,17 +6,10 @@
 #ifndef _VECTOR3D_HPP_
 #define _VECTOR3D_HPP_
 
-// Entrada y salida
-#include <iostream>
 
-// Para usar abs
-#include <cmath>
-
-// Para controlar las pre y post condiciones mediante asertos
-#include <cassert>
-
-// COMPLETAR, SI ES PRECISO
-
+#include <iostream> // Entrada y salida
+#include <cmath>    // Para usar abs
+#include <cassert>  // Para controlar las pre y post condiciones mediante asertos
 
 // Para la sobrecarga de los operadores de flujo: << y >>
 using std::istream;
@@ -74,22 +67,16 @@ class Vector3D
 
   // Producto escalar
   double dotProduct(Vector3D const &v)const;
-
   // Producto vectorial
   Vector3D crossProduct(Vector3D const &v)const;
-
   // Producto mixto
   double productoMixto(Vector3D const &v,Vector3D const &w)const;
-
   // Suma de una constante a un vector (x+k,y+k,z+k)
   void sumConst(double k);
-
   // Suma de un vector a otro (x1+x2,y1+y2,z1+z2)
   void sumVect(ed::Vector3D const &v);
-
   // Multiplicacion de vector por constante k (x*k,y*k,z*k)
   void multConst(double k);
-
   // Multiplicacion de un vector por otro (x1*x2,y1*y2,z1*z2)
   void multVect(ed::Vector3D const &v);
 
@@ -98,34 +85,25 @@ class Vector3D
 
   // Operador de igualdad ==
   bool operator == (Vector3D const &v)const;
-
 	// Operador de asignación =
 	Vector3D & operator=(Vector3D const &v);
-
 	// Operador + binario
   Vector3D operator+(Vector3D const &v)const;
-
   // Operador + unario
   Vector3D operator+()const;
-
   // Operador - binario
   Vector3D operator-(Vector3D const &v)const;
-
   // Operador - unario
   Vector3D operator-()const;
-
   // Operando * vector por k
   Vector3D operator*(double k)const;
-
   // Producto escalar de 2 vectores
   double operator*(Vector3D const &v)const;
-
+  // Operador ^, producto escalar de 2 vectores
   Vector3D operator^(Vector3D const &v)const;
 
 	//! \name Funciones lectura y escritura de la clase Vector3D
-
   void leerVector3D();
-
   void escribirVector3D()const;
 
 
@@ -140,10 +118,8 @@ class Vector3D
 
 	// COMPLETAR COMENTARIOS DE DOXYGEN
     Vector3D & operator* (double k, Vector3D const & objeto);
-
 	// COMPLETAR COMENTARIOS DE DOXYGEN
     istream &operator>>(istream &stream, Vector3D &objeto);
-
 	// COMPLETAR COMENTARIOS DE DOXYGEN
 	ostream &operator<<(ostream &stream, Vector3D const &objeto);
 
