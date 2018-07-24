@@ -24,12 +24,8 @@
 	\brief   Función principal de la práctica 1
 	\return  int
 */
-int main()
-{
 
- // QUITAR LOS "COMENTARIOS DE BLOQUE" CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
-
-
+int main(){
 
 	// Uso del constructor parametrizado con valores
 	ed::Vector3D u(1,2,3);
@@ -41,9 +37,7 @@ int main()
 	ed::Vector3D w;
 
 	double k = 2;
-
 	int opcion;
-
 
 	do{
 
@@ -61,24 +55,21 @@ int main()
 				std::cout << BRED;
 				std::cout << "[0] Fin del programa" << std::endl << std::endl;
 				std::cout << RESET;
+
 			break;
 
 			case 1:
-			   	std::cout << BIBLUE;
+			  std::cout << BIBLUE;
 				std::cout << "[1] Leer vectores" << std::endl;
 				std::cout << RESET;
-
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				ed::leerVectores(u,v,w);
 
 				break;
 
 			case 2:
-			   	std::cout << BIBLUE;
+			  std::cout << BIBLUE;
 				std::cout << "[2] Leer número escalar " << std::endl;
 				std::cout << RESET;
-
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				std::cout << "k = ";
 				std::cin >> k;
 
@@ -86,11 +77,10 @@ int main()
 
 
 			case 3:
-			   	std::cout << BIBLUE;
+			  std::cout << BIBLUE;
 				std::cout << "[3] Escribir número y vectores " << std::endl;
 				std::cout << RESET;
 
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				// Número escalar
 				std::cout  << BIYELLOW << "k = " << RESET << k << std::endl;
 
@@ -101,63 +91,51 @@ int main()
 
 
 			case 4:
-			   	std::cout << BIBLUE;
+			  std::cout << BIBLUE;
 				std::cout << "[4] Observadores de los vectores: módulos y ángulos " << std::endl;
 				std::cout << RESET;
-
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				ed::observadoresDeVectores(u,v);
 
 				break;
 
 			case 5:
-			   	std::cout << BIBLUE;
-			  	std::cout << "[5] Modificación del vector \"u\" usando v y k " << std::endl;
+			  std::cout << BIBLUE;
+			  std::cout << "[5] Modificación del vector \"u\" usando v y k " << std::endl;
 				std::cout << RESET;
-
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				ed::modificarVector(u,v,k);
 
 				break;
 
 			case 6:
-			   	std::cout << BIBLUE;
+			  std::cout << BIBLUE;
 				std::cout << "[6] Producto escalar de u y v " << std::endl;
 				std::cout << RESET;
-
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				ed::mostrarProductoEscalar(u,v);
 
 				break;
 
 
 			case 7:
-			   	std::cout << BIBLUE;
+			  std::cout << BIBLUE;
 				std::cout << "[7] Producto vectorial de u y v " << std::endl;
 				std::cout << RESET;
-
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				ed::mostrarProductoVectorial(u,v);
 
 				break;
 
 
 			case 8:
-			   	std::cout << BIBLUE;
-			  	std::cout << "[8] Producto mixto de tres vectores  u * (v ^ w) " << std::endl;
+			  std::cout << BIBLUE;
+			  std::cout << "[8] Producto mixto de tres vectores  u * (v ^ w) " << std::endl;
 				std::cout << RESET;
-
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				ed::mostrarProductoMixto(u,v,w);
 
 				break;
 
 			case 9:
-			   	std::cout << BIBLUE;
+			  std::cout << BIBLUE;
 				std::cout << "[9] Mostrar el uso de los operadores con u y v (se modifica w)" << std::endl;
 				std::cout << RESET;
-
-// QUITAR LOS COMENTARIOS CUANDO SE HAYA CODIFICADO LA CLASE Vector3D
 				ed::mostrarOperadores(u,v,w,k);
 
 				break;
@@ -172,23 +150,24 @@ int main()
 				std::cout << RESET;
      }
 
-    if (opcion !=0)
-    {
-		PLACE(25,1);
-		std::cout << "Pulse ";
-		std::cout << INVERSE ;
-		std::cout << "ENTER";
-		std::cout << RESET;
-		std::cout << " para mostrar el ";
-		std::cout << BIGREEN ;
-		std::cout << "menú: ";
-		std::cout << RESET;
-		// Pausa
-		std::cin.ignore();
+    if (opcion !=0){
 
-		std::cout << CLEAR_SCREEN;
+			PLACE(25,1);
+			std::cout << "Pulse ";
+			std::cout << INVERSE ;
+			std::cout << "ENTER";
+			std::cout << RESET;
+			std::cout << " para mostrar el ";
+			std::cout << BIGREEN ;
+			std::cout << "menú: ";
+			std::cout << RESET;
+			// Pausa
+			std::cin.ignore();
+
+			std::cout << CLEAR_SCREEN;
     }
-	  }while(opcion!=0);
+
+	}while(opcion!=0);
 
 	return 0;
 }

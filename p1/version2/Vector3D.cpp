@@ -11,10 +11,10 @@
 #include <cassert>
 #include "Vector3D.hpp"
 
-// Constructores
-
-	// Por defecto
-	 ed::Vector3D::Vector3D(){
+////////////////////////////////////////////////////////////////////////////////
+// CONSTRUCTORES
+// Por defecto
+ed::Vector3D::Vector3D(){
 
 		set1(0);
 		set2(0);
@@ -23,34 +23,34 @@
 		assert((get1() < COTA_ERROR)
 					and(get2() < COTA_ERROR)
 					and(get3() < COTA_ERROR));
-	}
+}
+// Por parametrizado
+ed::Vector3D::Vector3D(double v1, double v2, double v3){
+	set1(v1);
+	set2(v2);
+	set3(v3);
 
-	 ed::Vector3D::Vector3D(double v1, double v2, double v3){
-		set1(v1);
-		set2(v2);
-		set3(v3);
+	assert((std::abs(get1()-v1)<COTA_ERROR)
+				and (std::abs(get2()-v2)<COTA_ERROR)
+				and (std::abs(get3()-v3)<COTA_ERROR));
 
-		assert((std::abs(get1()-v1)<COTA_ERROR)
-					and (std::abs(get2()-v2)<COTA_ERROR)
-					and (std::abs(get3()-v3)<COTA_ERROR));
+}
+// De copia
+ed::Vector3D::Vector3D( Vector3D const &v){
 
-	}
+	set1(v.get1());
+	set2(v.get2());
+	set3(v.get3());
 
-	 ed::Vector3D::Vector3D( Vector3D const &v){
+	assert((std::abs(get1()-v.get1())<COTA_ERROR)
+				and (std::abs(get2()-v.get2())<COTA_ERROR)
+				and (std::abs(get3()-v.get3())<COTA_ERROR));
 
-		set1(v.get1());
-		set2(v.get2());
-		set3(v.get3());
+}
 
-		assert((std::abs(get1()-v.get1())<COTA_ERROR)
-					and (std::abs(get2()-v.get2())<COTA_ERROR)
-					and (std::abs(get3()-v.get3())<COTA_ERROR));
-
-	}
-
-
+////////////////////////////////////////////////////////////////////////////////
 // OBSERVADORES
-
+	// Modulo
 double  ed::Vector3D::modulo()const{
 
 	double valorDevuelto = sqrt(get1()*get1()+get2()*get2()+get3()*get3());
@@ -61,7 +61,7 @@ double  ed::Vector3D::modulo()const{
 	return valorDevuelto;
 
 }
-
+	// Angulo
 double ed::Vector3D::angulo(Vector3D const &v)const{
 
 	assert((modulo()*v.modulo())>0);
@@ -73,18 +73,7 @@ double ed::Vector3D::angulo(Vector3D const &v)const{
 	return angulo;
 
 }
-
-double ed::Vector3D::dotProduct(Vector3D const &v)const{
-
-	double valorDevuelto = get1()*v.get1() + get2()*v.get2() + get3()*v.get3();
-
-	assert(std::abs(valorDevuelto-(get1()*v.get1()+get2()*v.get2()+get3()*v.get3()))<COTA_ERROR);
-
-	return valorDevuelto;
-
-}
-
-
+ // Angulo Alfa
 double ed::Vector3D::alfa()const{
 
 	 ed::Vector3D alfa(1,0,0);
@@ -97,7 +86,7 @@ double ed::Vector3D::alfa()const{
 	return valorDevuelto;
 
 }
-
+ // Angulo Beta
 double ed::Vector3D::beta()const{
 
 	 ed::Vector3D beta(0,1,0);
@@ -111,7 +100,7 @@ double ed::Vector3D::beta()const{
 
 
 }
-
+ // Angulo Gamma
 double ed::Vector3D::gamma()const{
 
 	ed::Vector3D gamma(0,0,1);
@@ -124,7 +113,15 @@ double ed::Vector3D::gamma()const{
 	return valorDevuelto;
 
 }
+ // Producto escalar
+double ed::Vector3D::dotProduct(Vector3D const &v)const{
 
+	double valorDevuelto = get1()*v.get1() + get2()*v.get2() + get3()*v.get3();
+	assert(std::abs(valorDevuelto-(get1()*v.get1()+get2()*v.get2()+get3()*v.get3()))<COTA_ERROR);
+	return valorDevuelto;
+
+}
+ // Producto vectorial
 ed::Vector3D  ed::Vector3D::crossProduct(Vector3D const &v)const{
 
 	ed::Vector3D w(0.0,0.0,0.0);
@@ -140,7 +137,7 @@ ed::Vector3D  ed::Vector3D::crossProduct(Vector3D const &v)const{
 		return w;
 
 }
-
+ // Prodcuto mixto
 double  ed::Vector3D::productoMixto(Vector3D const &v,Vector3D const &w)const{
 
 	double valorDevuelto = dotProduct(v.crossProduct(w));
@@ -151,8 +148,30 @@ double  ed::Vector3D::productoMixto(Vector3D const &v,Vector3D const &w)const{
 
 }
 
-// Operaciones de modificación de las componentes del vector
+////////////////////////////////////////////////////////////////////////////////
+// MODIFICADORES
 
+// Operaciones de modificación de cada una de las componentes del vector
+
+// Modificador de x
+void  ed::Vector3D::set1(double v1){
+	vector_[0] = v1;
+	assert(((get1()-v1)<COTA_ERROR));
+}
+// Modificador de y
+void  ed::Vector3D::set2(double v2){
+	vector_[1] = v2;
+	assert(((get2()-v2)<COTA_ERROR));
+}
+// Modificador de z
+void  ed::Vector3D::set3(double v3){
+	vector_[2] = v3;
+	assert(((get3()-v3)<COTA_ERROR));
+}
+
+// Operaciones de modificación de datos de todas las componentes del vector
+
+ // Suma de una constante k, al vector
 void  ed::Vector3D::sumConst(double k){
 
 	ed::Vector3D old(get1(),get2(),get3());
@@ -166,7 +185,7 @@ void  ed::Vector3D::sumConst(double k){
 				and (std::abs(get1()-(old.get1()+k))<COTA_ERROR));
 
 }
-
+	// Suma de un vector v a otro vector
 void  ed::Vector3D::sumVect(Vector3D const &v){
 
 	ed::Vector3D old(get1(),get2(),get3());
@@ -180,7 +199,7 @@ void  ed::Vector3D::sumVect(Vector3D const &v){
 				and (std::abs(get1()-(old.get1()+v.get3()))<COTA_ERROR));
 
 }
-
+	// Multiplicar una constante k, al vector
 void  ed::Vector3D::multConst(double k){
 
 	ed::Vector3D old(get1(),get2(),get3());
@@ -194,7 +213,7 @@ void  ed::Vector3D::multConst(double k){
 				and (std::abs(get1()-(old.get1()*k))<COTA_ERROR));
 
 }
-
+	// Multiplicar un vecto v, por otro (componente a componente)
 void  ed::Vector3D::multVect(Vector3D const &v){
 
 	ed::Vector3D old(get1(),get2(),get3());
@@ -209,40 +228,11 @@ void  ed::Vector3D::multVect(Vector3D const &v){
 
 }
 
-////////////////////////////////////////////////////////////////
-
-// MODIFICADORES
-
-
-	void  ed::Vector3D::set1(double v1){
-		vector_[0] = v1;
-		assert(((get1()-v1)<COTA_ERROR));
-	}
-  void  ed::Vector3D::set2(double v2){
-		vector_[1] = v2;
-		assert(((get2()-v2)<COTA_ERROR));
-	}
-
-	void  ed::Vector3D::set3(double v3){
-		vector_[2] = v3;
-		assert(((get3()-v3)<COTA_ERROR));
-	}
-
-
 
 ////////////////////////////////////////////////////////////////////////////////
-
-// OPERADORES
-
-// COMPLETAR
-
-
-
-////////////////////////////////////////////////////////////////////////////////
-
 // FUNCIONES DE LECTURA Y ESCRITURA
 
-	void  ed::Vector3D::leerVector3D(){
+void  ed::Vector3D::leerVector3D(){
 
 		double v1=0.0,v2=0.0,v3=0.0;
 
@@ -265,12 +255,12 @@ void  ed::Vector3D::escribirVector3D()const{
 }
 
 
-
 ////////////////////////////////////////////////////////////////////////////////
+// OPERADORES
 // Se incluyen los operadores sobrecargados dentro del espacio de nombres de ed
 
 namespace ed{
-
+// Operador de asignación
 Vector3D & Vector3D::operator=(Vector3D const &v){
 
 
@@ -287,9 +277,7 @@ Vector3D & Vector3D::operator=(Vector3D const &v){
 	}
 	return * this;
 }
-
-
-
+// Operador de igualdad
 bool Vector3D::operator == (Vector3D const &v) const{
 
 	if((std::abs(get1()-v.get1())<COTA_ERROR)
@@ -301,7 +289,7 @@ bool Vector3D::operator == (Vector3D const &v) const{
 			return false;
 	}
 }
-
+// Operador de suma + binario
 Vector3D Vector3D::operator+(Vector3D const &v)const{
 
 	ed::Vector3D w(get1(),get2(),get3());
@@ -317,7 +305,7 @@ Vector3D Vector3D::operator+(Vector3D const &v)const{
 		return w;
 
 }
-
+// Operador de suma + unario
 Vector3D Vector3D::operator+()const{
 
 	Vector3D w(get1(),get2(),get3());
@@ -329,7 +317,7 @@ Vector3D Vector3D::operator+()const{
 		return w;
 
 }
-
+// Operador de resta - binario
 Vector3D Vector3D::operator-(Vector3D const &v)const{
 
 	Vector3D w(get1(),get2(),get3());
@@ -345,7 +333,7 @@ Vector3D Vector3D::operator-(Vector3D const &v)const{
 		return w;
 
 }
-
+// Operador de resta - unario
 Vector3D Vector3D::operator-()const{
 
 	Vector3D w(-get1(),-get2(),-get3());
@@ -357,7 +345,7 @@ Vector3D Vector3D::operator-()const{
 		return w;
 
 }
-
+// Operador * postfijo del vector por una constante k
 Vector3D Vector3D::operator*(double k)const{
 
 	Vector3D w(get1()*k , get2()*k , get3()*k);
@@ -369,7 +357,7 @@ Vector3D Vector3D::operator*(double k)const{
 	return w;
 
 }
-
+// Operador * producto escalar de 2 vectores
 double Vector3D::operator*(Vector3D const &v)const{
 
 	double valorDevuelto = get1()*v.get1()+get2()*v.get2()+get3()*v.get3();
@@ -379,7 +367,7 @@ double Vector3D::operator*(Vector3D const &v)const{
 	return valorDevuelto;
 
 }
-
+// Operador ^ producto escalar de 2 vectores
 Vector3D Vector3D::operator^(Vector3D const &v)const{
 
 	Vector3D w(0.0,0.0,0.0);
@@ -411,7 +399,6 @@ Vector3D Vector3D::operator^(Vector3D const &v)const{
 
 	return *vectorResultado;
 }
-
 
 // Sobrecarga del operador de salida
 // Se escriben por pantalla las coordenadas del vector 3D  de la forma (v1, v2, v3)
