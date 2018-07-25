@@ -3,17 +3,12 @@
    \brief Fichero que contiene el código de las funciones de la clase Vector3D
 */
 
-
-// Ficheros de cabecera
-#include <iostream>
-// Para usar sqrt, acos
-#include <cmath>
-// Para controlar las pre y post condiciones mediante asertos
-#include <cassert>
+#include <iostream> // Ficheros de cabecera
+#include <cmath>		// Para usar sqrt, acos
+#include <cassert>	// Para controlar las pre y post condiciones mediante asertos
 #include "Vector3D.hpp"
 
 ////////////////////////////////////////////////////////////////
-
 // CONSTRUCTORES
 
 ed::Vector3D::Vector3D(){
@@ -26,7 +21,7 @@ ed::Vector3D::Vector3D(){
 
 }
 
-ed::Vector3D::Vector3D(double x, double y, double z){
+ed::Vector3D::Vector3D(double const &x, double const &y, double const &z){
 	set1(x);
 	set2(y);
 	set3(z);
@@ -46,9 +41,9 @@ ed::Vector3D::Vector3D(ed::Vector3D const &v){
 
 }
 
-
 ////////////////////////////////////////////////////////////////
 // OBSERVADORES
+// Operaciones de consulta de cada una de las componentes del vector
 
 double  ed::Vector3D::get1()const{
 	return x_;
@@ -62,6 +57,8 @@ double  ed::Vector3D::get3()const{
 	return z_;
 }
 
+// Modulo ////////////////////////////////////////////////////////////////////
+
 double ed::Vector3D::modulo()const{
 
 	double modulo = std::sqrt(get1()*get1() + get2()*get2() + get3()*get3());
@@ -72,6 +69,8 @@ double ed::Vector3D::modulo()const{
 	return modulo;
 
 }
+
+// Angulos ////////////////////////////////////////////////////////////////////
 
 double ed::Vector3D::angulo(ed::Vector3D const &v)const{
 
@@ -90,18 +89,6 @@ double ed::Vector3D::angulo(ed::Vector3D const &v)const{
 	}
 
 	return angulo;
-
-}
-
-double ed::Vector3D::dotProduct(ed::Vector3D const &v)const{
-
-	double pdtoEscalar = get1()*v.get1() + get2()*v.get2() + get3()*v.get3();
-
-	assert(std::abs(pdtoEscalar-(get1()*v.get1()
-								+ get2()*v.get2()
-								+ get3()*v.get3()))<COTA_ERROR);
-
-	return pdtoEscalar;
 
 }
 
@@ -132,6 +119,22 @@ double ed::Vector3D::gamma()const{
 
 }
 
+// Pdto escalar ////////////////////////////////////////////////////////////////
+
+double ed::Vector3D::dotProduct(ed::Vector3D const &v)const{
+
+	double pdtoEscalar = get1()*v.get1() + get2()*v.get2() + get3()*v.get3();
+
+	assert(std::abs(pdtoEscalar-(get1()*v.get1()
+								+ get2()*v.get2()
+								+ get3()*v.get3()))<COTA_ERROR);
+
+	return pdtoEscalar;
+
+}
+
+// Pdto vectorial //////////////////////////////////////////////////////////////
+
 ed::Vector3D ed::Vector3D::crossProduct(ed::Vector3D const &v)const{
 
 	ed::Vector3D w = Vector3D(0,0,0);
@@ -148,6 +151,8 @@ ed::Vector3D ed::Vector3D::crossProduct(ed::Vector3D const &v)const{
 
 }
 
+// Pdto mixto //////////////////////////////////////////////////////////////////
+
 double ed::Vector3D::productoMixto(Vector3D const &v,Vector3D const &w)const{
 
 	double pdtoMixto = dotProduct(v.crossProduct(w));
@@ -157,29 +162,29 @@ double ed::Vector3D::productoMixto(Vector3D const &v,Vector3D const &w)const{
 }
 
 ////////////////////////////////////////////////////////////////
-
 // MODIFICADORES
+// Operaciones de modificación de cada una de las componentes del vector
 
-void ed::Vector3D::set1(double x){
+void ed::Vector3D::set1(double const &x){
 	x_=x;
 	assert((std::abs(get1()-x)<COTA_ERROR));
 }
 
-void ed::Vector3D::set2(double y){
+void ed::Vector3D::set2(double const &y){
 	y_=y;
 	assert((std::abs(get2()-y)<COTA_ERROR));
 }
 
-void ed::Vector3D::set3(double z){
+void ed::Vector3D::set3(double const &z){
 	z_=z;
 	assert((std::abs(get3()-z)<COTA_ERROR));
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-
 // FUNCIONES DE MODIFICACION
+// Operaciones de modificación de todas las componentes del vector
 
-void ed::Vector3D::sumConst(double k){
+void ed::Vector3D::sumConst(double const &k){
 
 	Vector3D old(get1(),get2(),get3());
 
@@ -208,7 +213,7 @@ void ed::Vector3D::sumVect(ed::Vector3D const &v){
 }
 
 
-void ed::Vector3D::multConst(double k){
+void ed::Vector3D::multConst(double const &k){
 
 	Vector3D old(get1(),get2(),get3());
 
@@ -238,7 +243,6 @@ void ed::Vector3D::multVect(ed::Vector3D const &v){
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-
 // FUNCIONES DE LECTURA Y ESCRITURA
 
 void ed::Vector3D::leerVector3D(){
@@ -266,7 +270,6 @@ void ed::Vector3D::escribirVector3D()const{
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-
 // Se incluyen los operadores sobrecargados dentro del espacio de nombres de ed
 
 namespace ed{
@@ -361,7 +364,7 @@ Vector3D Vector3D::operator-()const{
 
 }
 
-Vector3D Vector3D::operator*(double k)const{
+Vector3D Vector3D::operator*(double const &k)const{
 
 	Vector3D v(get1()*k,get2()*k,get3()*k);
 
@@ -397,7 +400,6 @@ Vector3D Vector3D::operator ^(Vector3D const &v)const{
 
 
 // FUNCIONES EXTERNAS //////////////////////////////////////////////
-
 // Producto "por un" escalar (prefijo): k * v
 Vector3D & operator*(double k, Vector3D const & v){
 

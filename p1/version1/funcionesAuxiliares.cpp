@@ -1,8 +1,8 @@
 /*!
   \file   funcionesAuxiliares.cpp
   \brief  Código de las funciones auxiliares para el programa principal de la práctica 1
-  \author
-  \date
+  \author David Sánchez Fernández
+  \date   2018-7-25
 */
 
 #include <iostream>

@@ -1,0 +1,166 @@
+\hypertarget{classed_1_1Vector3D}{}\section{ed\+:\+:Vector3D Class Reference}
+\label{classed_1_1Vector3D}\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+
+
+Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}\+: $ \vec{v} = (x_, y_, z_) = x_ \vec{i} + y_ \vec{j} + z_ \vec{k} $.  
+
+
+
+
+{\ttfamily \#include $<$Vector3\+D.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{Indent}\textbf{ Constructores de la clase Vector3D}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classed_1_1Vector3D_a6747bbbfd5d1fac542e46315aed209e5}{Vector3D}} ()
+\begin{DoxyCompactList}\small\item\em Constructor sin argumentos, inicializa cada una de las variables a cero. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_ab338fbfc5e42af056568727cdfccb0f2}\label{classed_1_1Vector3D_ab338fbfc5e42af056568727cdfccb0f2}} 
+{\bfseries Vector3D} (double const \&x, double const \&y, double const \&z)
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a777ab163dc0be27858fdfd4d4706ff40}\label{classed_1_1Vector3D_a777ab163dc0be27858fdfd4d4706ff40}} 
+{\bfseries Vector3D} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Observadores\+: funciones de consulta de Vector3D}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}\label{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}} 
+double {\bfseries get1} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}\label{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}} 
+double {\bfseries get2} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}\label{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}} 
+double {\bfseries get3} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}\label{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}} 
+double {\bfseries modulo} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a0b41efa0f1d21a4fa730ff522ac3b5c7}\label{classed_1_1Vector3D_a0b41efa0f1d21a4fa730ff522ac3b5c7}} 
+double {\bfseries angulo} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v) const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_af3b622283c86e66467fd6fb766990d3b}\label{classed_1_1Vector3D_af3b622283c86e66467fd6fb766990d3b}} 
+double {\bfseries alfa} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a0b9663bbc1b3c3237d0d83583b79597d}\label{classed_1_1Vector3D_a0b9663bbc1b3c3237d0d83583b79597d}} 
+double {\bfseries beta} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_aeb55bfb591e508192eb11e63abbbac19}\label{classed_1_1Vector3D_aeb55bfb591e508192eb11e63abbbac19}} 
+double {\bfseries gamma} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a849531cfc47ecc3feff503f33ecf76e8}\label{classed_1_1Vector3D_a849531cfc47ecc3feff503f33ecf76e8}} 
+double {\bfseries dot\+Product} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a57182dbe569e84f8aab4cb7adde5650f}\label{classed_1_1Vector3D_a57182dbe569e84f8aab4cb7adde5650f}} 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries cross\+Product} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a2063f0cdfdb6a34e4f426a1f247a4459}\label{classed_1_1Vector3D_a2063f0cdfdb6a34e4f426a1f247a4459}} 
+double {\bfseries producto\+Mixto} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v, \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&w) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Modificadores\+: funciones de modificación de Vector3D}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_acfdf541551fe60c3d01f4415989f20c2}\label{classed_1_1Vector3D_acfdf541551fe60c3d01f4415989f20c2}} 
+void {\bfseries set1} (double const \&x)
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a9148554ef7b54d5f06f1938791ff9e6a}\label{classed_1_1Vector3D_a9148554ef7b54d5f06f1938791ff9e6a}} 
+void {\bfseries set2} (double const \&y)
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a6c658249a001608a6e8c8e8e249d3fb3}\label{classed_1_1Vector3D_a6c658249a001608a6e8c8e8e249d3fb3}} 
+void {\bfseries set3} (double const \&z)
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a38a5c63c2926e9685d040eab39e23c60}\label{classed_1_1Vector3D_a38a5c63c2926e9685d040eab39e23c60}} 
+void {\bfseries sum\+Const} (double const \&k)
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a1b33db7851b02ee4a00aee17262af20a}\label{classed_1_1Vector3D_a1b33db7851b02ee4a00aee17262af20a}} 
+void {\bfseries sum\+Vect} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a02b35a0d961ae10123be25aa6d62f554}\label{classed_1_1Vector3D_a02b35a0d961ae10123be25aa6d62f554}} 
+void {\bfseries mult\+Const} (double const \&k)
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_aea173ccbe7eb56fae15e6c64c693f9f4}\label{classed_1_1Vector3D_aea173ccbe7eb56fae15e6c64c693f9f4}} 
+void {\bfseries mult\+Vect} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Funciones lectura y escritura de la clase Vector3D}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a383b32d61696badf77dac30aca5211a3}\label{classed_1_1Vector3D_a383b32d61696badf77dac30aca5211a3}} 
+void {\bfseries leer\+Vector3D} ()
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a8aa810ccaca06f0f0a34871433e7235b}\label{classed_1_1Vector3D_a8aa810ccaca06f0f0a34871433e7235b}} 
+void {\bfseries escribir\+Vector3D} () const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Operadores de la clase}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a09cbd7f5d848a95b652be1a66703710f}\label{classed_1_1Vector3D_a09cbd7f5d848a95b652be1a66703710f}} 
+bool {\bfseries operator==} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_afc9b1243cc26a4f20cf6e05f7e4dd8cc}\label{classed_1_1Vector3D_afc9b1243cc26a4f20cf6e05f7e4dd8cc}} 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \& {\bfseries operator=} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v)
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a8bd997d7786abcc49ae5f2f6f4e44db6}\label{classed_1_1Vector3D_a8bd997d7786abcc49ae5f2f6f4e44db6}} 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator+} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a0b5d720dcaf6e5f4211179ee973b0ae8}\label{classed_1_1Vector3D_a0b5d720dcaf6e5f4211179ee973b0ae8}} 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator+} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_ab7fb56356289e2cd6c96700dcf35607c}\label{classed_1_1Vector3D_ab7fb56356289e2cd6c96700dcf35607c}} 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator-\/} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_aab00bcab59786a685b95fb12f8909e28}\label{classed_1_1Vector3D_aab00bcab59786a685b95fb12f8909e28}} 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator-\/} () const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a9eb8e6b92c903d0e14dc986fe36b4e26}\label{classed_1_1Vector3D_a9eb8e6b92c903d0e14dc986fe36b4e26}} 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator$\ast$} (double const \&k) const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a2328a6fb17de1d7b58ec1e3e8430c923}\label{classed_1_1Vector3D_a2328a6fb17de1d7b58ec1e3e8430c923}} 
+double {\bfseries operator$\ast$} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\item 
+\mbox{\Hypertarget{classed_1_1Vector3D_a4c38081a03f4294dbfa3aee531fe5a73}\label{classed_1_1Vector3D_a4c38081a03f4294dbfa3aee531fe5a73}} 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator$^\wedge$} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}\+: $ \vec{v} = (x_, y_, z_) = x_ \vec{i} + y_ \vec{j} + z_ \vec{k} $. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classed_1_1Vector3D_a6747bbbfd5d1fac542e46315aed209e5}\label{classed_1_1Vector3D_a6747bbbfd5d1fac542e46315aed209e5}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}}
+{\footnotesize\ttfamily ed\+::\+Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor sin argumentos, inicializa cada una de las variables a cero. 
+
+\begin{DoxyPostcond}{Postcondition}
+Comprueba que se ha asignado un cero a cada una de las componentes~\newline
+ del vector con el siguiente código\+: assert((get1()$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR)~\newline
+ and (get2()$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR)~\newline
+ and (get3()$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR));
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+En la Postcondición se compara con la cota de error (C\+O\+T\+A\+\_\+\+E\+R\+R\+OR -\/ 1.\+0e-\/6)~\newline
+ para aumentar la precisión del resultado. Será mas relevante en funciones~\newline
+ posteriores 
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+-\/ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Vector3D_8hpp}{Vector3\+D.\+hpp}}\item 
+\mbox{\hyperlink{Vector3D_8cpp}{Vector3\+D.\+cpp}}\end{DoxyCompactItemize}
