@@ -12,7 +12,7 @@ Fichero de definición de la clase Vector3D\+: vector libre de tres dimensiones 
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}
-\begin{DoxyCompactList}\small\item\em Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}\+: $ \vec{v} = (x_, y_, z_) = x_ \vec{i} + y_ \vec{j} + z_ \vec{k} $. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,18 +23,88 @@ class \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}
 \begin{Indent}\textbf{ Funciones que utilizan un objetos de la clase Vector3D, pero que no pertenecen a la clase Vector3D}\par
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{Vector3D_8cpp_a66a7ac13192629b7ea7f1f5461209433}\label{Vector3D_8cpp_a66a7ac13192629b7ea7f1f5461209433}} 
-Vector3D \& {\bfseries ed\+::operator$\ast$} (double k, Vector3D const \&v)
-\item 
-\mbox{\Hypertarget{Vector3D_8cpp_a7f727a46126799348a421c737f50008e}\label{Vector3D_8cpp_a7f727a46126799348a421c737f50008e}} 
-istream \& {\bfseries ed\+::operator$>$$>$} (istream \&i, Vector3D \&v)
-\item 
-\mbox{\Hypertarget{Vector3D_8cpp_aca80d4d6f66fd5c5c36b0fbb8fcbdb8b}\label{Vector3D_8cpp_aca80d4d6f66fd5c5c36b0fbb8fcbdb8b}} 
-ostream \& {\bfseries ed\+::operator$<$$<$} (ostream \&o, Vector3D const \&v)
-\end{DoxyCompactItemize}
+Vector3D \& \mbox{\hyperlink{Vector3D_8cpp_a66a7ac13192629b7ea7f1f5461209433}{ed\+::operator$\ast$}} (double k, Vector3D const \&v)
+\begin{DoxyCompactList}\small\item\em Multiplica las componentes del vector V por la constante K pasado por parametro. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{Vector3D_8cpp_a7f727a46126799348a421c737f50008e}{ed\+::operator$>$$>$}} (istream \&i, Vector3D \&v)
+\begin{DoxyCompactList}\small\item\em Lee desde el flujo de entrada las componentes del vector “v” separadas por espacios. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{Vector3D_8cpp_aca80d4d6f66fd5c5c36b0fbb8fcbdb8b}{ed\+::operator$<$$<$}} (ostream \&o, Vector3D const \&v)
+\begin{DoxyCompactList}\small\item\em Escribe en el flujo de salida las componentes del vector “v” ~\newline
+ con el formato (x,y,z) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 
 
 \subsection{Detailed Description}
 Fichero de definición de la clase Vector3D\+: vector libre de tres dimensiones en su versión de tres variables (x,y,z) 
 
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Vector3D_8cpp_file_a66a7ac13192629b7ea7f1f5461209433}\label{Vector3D_8cpp_file_a66a7ac13192629b7ea7f1f5461209433}} 
+\index{Vector3\+D.\+hpp@{Vector3\+D.\+hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector3\+D.\+hpp@{Vector3\+D.\+hpp}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily Vector3D \& ed\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Multiplica las componentes del vector V por la constante K pasado por parametro. 
+
+\begin{DoxyNote}{Note}
+Método declarado como const 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em double} & k → Constante K, de tipo double (Real) \\
+\hline
+{\em Vector3D} & const \&v → Referencia constante de tipo Vector3D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor actual menos el producto del anterior ~\newline
+ por la constante K debe ser menor que C\+O\+T\+A\+\_\+\+E\+R\+R\+OR 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve otro vector cuyas componentes se obtienen multiplicando~\newline
+ por K las componentes del vector V pasado como parámetro 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Vector3D_8cpp_file_aca80d4d6f66fd5c5c36b0fbb8fcbdb8b}\label{Vector3D_8cpp_file_aca80d4d6f66fd5c5c36b0fbb8fcbdb8b}} 
+\index{Vector3\+D.\+hpp@{Vector3\+D.\+hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Vector3\+D.\+hpp@{Vector3\+D.\+hpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily ostream \& ed\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{o,  }\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Escribe en el flujo de salida las componentes del vector “v” ~\newline
+ con el formato (x,y,z) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ostream} & \&stream → Flujo de salida, de tipo ostream \\
+\hline
+{\em Vector3D} & const \&objeto → Vector, de tipo Vector3D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flujo de entrada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Vector3D_8cpp_file_a7f727a46126799348a421c737f50008e}\label{Vector3D_8cpp_file_a7f727a46126799348a421c737f50008e}} 
+\index{Vector3\+D.\+hpp@{Vector3\+D.\+hpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Vector3\+D.\+hpp@{Vector3\+D.\+hpp}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily istream \& ed\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{i,  }\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Lee desde el flujo de entrada las componentes del vector “v” separadas por espacios. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em istream} & \&stream → Flujo de entrada, de tipo istram \\
+\hline
+{\em Vector3D} & \&objeto → Vector, de tipo Vector3D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flujo de entrada 
+\end{DoxyReturn}

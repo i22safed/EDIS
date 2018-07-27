@@ -144,7 +144,7 @@ ed::Vector3D ed::Vector3D::crossProduct(ed::Vector3D const &v)const{
 	w.set3(get1()*v.get2()-get2()*v.get1());
 
 	assert(dotProduct(w) == 0);
-	assert(dotProduct(v) == 0);
+	assert(v.dotProduct(w) == 0);
 	assert(std::abs(w.modulo()-modulo()*v.modulo()*std::sin(angulo(v)))<COTA_ERROR);
 
 	return w;

@@ -1,6 +1,6 @@
 /*!
  \mainpage Implementación de un vector libre de tres dimensiones
- \brief		\f$ \vec{v} = (x_, y_, z_) = x_ \vec{i} + y_ \vec{j} + z_ \vec{k} \f$
+ \brief		 Vector V = (v1, v2, v3)
  \author   David Sánchez Fernández
  \date     2018-7-25
  \version  1.0

@@ -2,7 +2,7 @@
 \label{classed_1_1Vector3D}\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}}
 
 
-Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}\+: $ \vec{v} = (x_, y_, z_) = x_ \vec{i} + y_ \vec{j} + z_ \vec{k} $.  
+Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}.  
 
 
 
@@ -15,126 +15,117 @@ Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}\+: $ \v
 \item 
 \mbox{\hyperlink{classed_1_1Vector3D_a6747bbbfd5d1fac542e46315aed209e5}{Vector3D}} ()
 \begin{DoxyCompactList}\small\item\em Constructor sin argumentos, inicializa cada una de las variables a cero. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_ab338fbfc5e42af056568727cdfccb0f2}\label{classed_1_1Vector3D_ab338fbfc5e42af056568727cdfccb0f2}} 
-{\bfseries Vector3D} (double const \&x, double const \&y, double const \&z)
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a777ab163dc0be27858fdfd4d4706ff40}\label{classed_1_1Vector3D_a777ab163dc0be27858fdfd4d4706ff40}} 
-{\bfseries Vector3D} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classed_1_1Vector3D_ab338fbfc5e42af056568727cdfccb0f2}{Vector3D}} (double const \&x, double const \&y, double const \&z)
+\begin{DoxyCompactList}\small\item\em Constructor parametrizado, inicializa cada una de las variables a ~\newline
+ las pasadas como parametro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D_a777ab163dc0be27858fdfd4d4706ff40}{Vector3D}} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
+\begin{DoxyCompactList}\small\item\em Constructor parametrizado, inicializa cada una de las variables a ~\newline
+ a cada una de las respectivas variables del vector pasado como ~\newline
+ argumento. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Observadores\+: funciones de consulta de Vector3D}\par
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}\label{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}} 
-double {\bfseries get1} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}\label{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}} 
-double {\bfseries get2} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}\label{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}} 
-double {\bfseries get3} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}\label{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}} 
-double {\bfseries modulo} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a0b41efa0f1d21a4fa730ff522ac3b5c7}\label{classed_1_1Vector3D_a0b41efa0f1d21a4fa730ff522ac3b5c7}} 
-double {\bfseries angulo} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v) const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_af3b622283c86e66467fd6fb766990d3b}\label{classed_1_1Vector3D_af3b622283c86e66467fd6fb766990d3b}} 
-double {\bfseries alfa} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a0b9663bbc1b3c3237d0d83583b79597d}\label{classed_1_1Vector3D_a0b9663bbc1b3c3237d0d83583b79597d}} 
-double {\bfseries beta} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_aeb55bfb591e508192eb11e63abbbac19}\label{classed_1_1Vector3D_aeb55bfb591e508192eb11e63abbbac19}} 
-double {\bfseries gamma} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a849531cfc47ecc3feff503f33ecf76e8}\label{classed_1_1Vector3D_a849531cfc47ecc3feff503f33ecf76e8}} 
-double {\bfseries dot\+Product} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a57182dbe569e84f8aab4cb7adde5650f}\label{classed_1_1Vector3D_a57182dbe569e84f8aab4cb7adde5650f}} 
-\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries cross\+Product} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a2063f0cdfdb6a34e4f426a1f247a4459}\label{classed_1_1Vector3D_a2063f0cdfdb6a34e4f426a1f247a4459}} 
-double {\bfseries producto\+Mixto} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v, \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&w) const
-\end{DoxyCompactItemize}
+double \mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1}} () const
+\begin{DoxyCompactList}\small\item\em Observador de la componente X del vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2}} () const
+\begin{DoxyCompactList}\small\item\em Observador de la componente Y del vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3}} () const
+\begin{DoxyCompactList}\small\item\em Observador de la componente Z del vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}{modulo}} () const
+\begin{DoxyCompactList}\small\item\em Observador del modulo del vector, que posee la siguiente formula\+:~\newline
+ sqrt(v1$\ast$v1+v2$\ast$v2+v3$\ast$v3). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_a0b41efa0f1d21a4fa730ff522ac3b5c7}{angulo}} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v) const
+\begin{DoxyCompactList}\small\item\em Observador del angulo del vector, que posee la siguiente formula\+:~\newline
+ sqrt(v1$\ast$v1+v2$\ast$v2+v3$\ast$v3) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_af3b622283c86e66467fd6fb766990d3b}{alfa}} () const
+\begin{DoxyCompactList}\small\item\em Observador del angulo que forma el vector en cuestión y el vector~\newline
+ alfa, el cual solamente tiene componentes en X → (1,0,0) Siendo~\newline
+ la operación angulo(\+Vector3\+D(1,0,0)) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_a0b9663bbc1b3c3237d0d83583b79597d}{beta}} () const
+\begin{DoxyCompactList}\small\item\em Observador del angulo que forma el vector en cuestión y el vector~\newline
+ beta, el cual solamente tiene componentes en Y → (0,1,0) Siendo~\newline
+ la operación angulo(\+Vector3\+D(0,1,0)) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_aeb55bfb591e508192eb11e63abbbac19}{gamma}} () const
+\begin{DoxyCompactList}\small\item\em Observador del angulo que forma el vector en cuestión y el vector~\newline
+ gamma, el cual solamente tiene componentes en Z → (0,0,1). Siendo~\newline
+ la operación angulo(\+Vector3\+D(0,0,1)) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_a849531cfc47ecc3feff503f33ecf76e8}{dot\+Product}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\begin{DoxyCompactList}\small\item\em Observador del producto escalar del vector actual y el vector~\newline
+ pasado como parametro (v). La operación es (\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}+ ~\newline
+ \mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}} + \mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \mbox{\hyperlink{classed_1_1Vector3D_a0e1d07b0544bdce91f8eb2e1281a1613}{cross\+Product}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\begin{DoxyCompactList}\small\item\em Observador del producto vectorial del vector actual y el vector~\newline
+ pasado como parametro (v). La operación es~\newline
+ w.\+set1(\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}-\/get3()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}});~\newline
+ w.\+set2(-\/get1()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}+get3()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}});~\newline
+ w.\+set3(\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}-\/get2()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}});. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_a2063f0cdfdb6a34e4f426a1f247a4459}{producto\+Mixto}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v, \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&w) const
+\begin{DoxyCompactList}\small\item\em Observador del producto escalar del vector actual con el vector~\newline
+ obtenido al calcular el producto vectorial de otros dos vectores~\newline
+ con la siguiente formula → (u$\ast$(v$^\wedge$w)) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Modificadores\+: funciones de modificación de Vector3D}\par
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classed_1_1Vector3D_acfdf541551fe60c3d01f4415989f20c2}\label{classed_1_1Vector3D_acfdf541551fe60c3d01f4415989f20c2}} 
-void {\bfseries set1} (double const \&x)
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a9148554ef7b54d5f06f1938791ff9e6a}\label{classed_1_1Vector3D_a9148554ef7b54d5f06f1938791ff9e6a}} 
-void {\bfseries set2} (double const \&y)
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a6c658249a001608a6e8c8e8e249d3fb3}\label{classed_1_1Vector3D_a6c658249a001608a6e8c8e8e249d3fb3}} 
-void {\bfseries set3} (double const \&z)
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a38a5c63c2926e9685d040eab39e23c60}\label{classed_1_1Vector3D_a38a5c63c2926e9685d040eab39e23c60}} 
-void {\bfseries sum\+Const} (double const \&k)
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a1b33db7851b02ee4a00aee17262af20a}\label{classed_1_1Vector3D_a1b33db7851b02ee4a00aee17262af20a}} 
-void {\bfseries sum\+Vect} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a02b35a0d961ae10123be25aa6d62f554}\label{classed_1_1Vector3D_a02b35a0d961ae10123be25aa6d62f554}} 
-void {\bfseries mult\+Const} (double const \&k)
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_aea173ccbe7eb56fae15e6c64c693f9f4}\label{classed_1_1Vector3D_aea173ccbe7eb56fae15e6c64c693f9f4}} 
-void {\bfseries mult\+Vect} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classed_1_1Vector3D_acfdf541551fe60c3d01f4415989f20c2}{set1}} (double const \&x)
+\begin{DoxyCompactList}\small\item\em Modificador de la componente X del vector → X\+\_\+ = x. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classed_1_1Vector3D_a9148554ef7b54d5f06f1938791ff9e6a}{set2}} (double const \&y)
+\begin{DoxyCompactList}\small\item\em Modificador de la componente Y del vector → Y\+\_\+ = y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classed_1_1Vector3D_a6c658249a001608a6e8c8e8e249d3fb3}{set3}} (double const \&z)
+\begin{DoxyCompactList}\small\item\em Modificador de la componente Z del vector → Z\+\_\+ = z. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classed_1_1Vector3D_a38a5c63c2926e9685d040eab39e23c60}{sum\+Const}} (double const \&k)
+\begin{DoxyCompactList}\small\item\em Modifica el vector sumando una constante a cada componente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classed_1_1Vector3D_a1b33db7851b02ee4a00aee17262af20a}{sum\+Vect}} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
+\begin{DoxyCompactList}\small\item\em Modifica el vector sumando un vector componente a componente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classed_1_1Vector3D_a02b35a0d961ae10123be25aa6d62f554}{mult\+Const}} (double const \&k)
+\begin{DoxyCompactList}\small\item\em Modifica el vector multiplicando una constante a cada componente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classed_1_1Vector3D_aea173ccbe7eb56fae15e6c64c693f9f4}{mult\+Vect}} (\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&v)
+\begin{DoxyCompactList}\small\item\em Modifica el vector sumando un vector componente a componente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Funciones lectura y escritura de la clase Vector3D}\par
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a383b32d61696badf77dac30aca5211a3}\label{classed_1_1Vector3D_a383b32d61696badf77dac30aca5211a3}} 
-void {\bfseries leer\+Vector3D} ()
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a8aa810ccaca06f0f0a34871433e7235b}\label{classed_1_1Vector3D_a8aa810ccaca06f0f0a34871433e7235b}} 
-void {\bfseries escribir\+Vector3D} () const
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classed_1_1Vector3D_a383b32d61696badf77dac30aca5211a3}{leer\+Vector3D}} ()
+\begin{DoxyCompactList}\small\item\em Lee desde teclado las componentes del vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classed_1_1Vector3D_a8aa810ccaca06f0f0a34871433e7235b}{escribir\+Vector3D}} () const
+\begin{DoxyCompactList}\small\item\em Muestra por pantalla las componentes del vector con el formato~\newline
+ (x,y,z) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ Operadores de la clase}\par
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a09cbd7f5d848a95b652be1a66703710f}\label{classed_1_1Vector3D_a09cbd7f5d848a95b652be1a66703710f}} 
-bool {\bfseries operator==} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_afc9b1243cc26a4f20cf6e05f7e4dd8cc}\label{classed_1_1Vector3D_afc9b1243cc26a4f20cf6e05f7e4dd8cc}} 
-\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \& {\bfseries operator=} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v)
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a8bd997d7786abcc49ae5f2f6f4e44db6}\label{classed_1_1Vector3D_a8bd997d7786abcc49ae5f2f6f4e44db6}} 
-\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator+} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a0b5d720dcaf6e5f4211179ee973b0ae8}\label{classed_1_1Vector3D_a0b5d720dcaf6e5f4211179ee973b0ae8}} 
-\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator+} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_ab7fb56356289e2cd6c96700dcf35607c}\label{classed_1_1Vector3D_ab7fb56356289e2cd6c96700dcf35607c}} 
-\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator-\/} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_aab00bcab59786a685b95fb12f8909e28}\label{classed_1_1Vector3D_aab00bcab59786a685b95fb12f8909e28}} 
-\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator-\/} () const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a9eb8e6b92c903d0e14dc986fe36b4e26}\label{classed_1_1Vector3D_a9eb8e6b92c903d0e14dc986fe36b4e26}} 
-\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator$\ast$} (double const \&k) const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a2328a6fb17de1d7b58ec1e3e8430c923}\label{classed_1_1Vector3D_a2328a6fb17de1d7b58ec1e3e8430c923}} 
-double {\bfseries operator$\ast$} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
-\item 
-\mbox{\Hypertarget{classed_1_1Vector3D_a4c38081a03f4294dbfa3aee531fe5a73}\label{classed_1_1Vector3D_a4c38081a03f4294dbfa3aee531fe5a73}} 
-\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} {\bfseries operator$^\wedge$} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classed_1_1Vector3D_a09cbd7f5d848a95b652be1a66703710f}{operator==}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\begin{DoxyCompactList}\small\item\em Comprueba si el vector actual y el vector V son iguales. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \& \mbox{\hyperlink{classed_1_1Vector3D_afc9b1243cc26a4f20cf6e05f7e4dd8cc}{operator=}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v)
+\begin{DoxyCompactList}\small\item\em Asigna el vector V al vector actual. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \mbox{\hyperlink{classed_1_1Vector3D_a8bd997d7786abcc49ae5f2f6f4e44db6}{operator+}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\begin{DoxyCompactList}\small\item\em Suma el vector V al vector actual. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \mbox{\hyperlink{classed_1_1Vector3D_a0b5d720dcaf6e5f4211179ee973b0ae8}{operator+}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve otro vector que es una copia del vector actual. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \mbox{\hyperlink{classed_1_1Vector3D_ab7fb56356289e2cd6c96700dcf35607c}{operator-\/}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\begin{DoxyCompactList}\small\item\em Resta el vector V al vector actual. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \mbox{\hyperlink{classed_1_1Vector3D_aab00bcab59786a685b95fb12f8909e28}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve otro vector que es una copia del vector actual pero con~\newline
+ signo negativo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \mbox{\hyperlink{classed_1_1Vector3D_a9eb8e6b92c903d0e14dc986fe36b4e26}{operator$\ast$}} (double const \&k) const
+\begin{DoxyCompactList}\small\item\em Se multiplican las componentes del vector por una constante K. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classed_1_1Vector3D_ac68f544bb9dccf1957276751eb9b22ef}{operator$\ast$}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\begin{DoxyCompactList}\small\item\em Prodcuto escalar del vector actual y el pasado como parámetro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \mbox{\hyperlink{classed_1_1Vector3D_a4c38081a03f4294dbfa3aee531fe5a73}{operator$^\wedge$}} (\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&v) const
+\begin{DoxyCompactList}\small\item\em Se realiza el producto vectorial del vector actual y el vector ~\newline
+ pasado por parametro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 
 
 \subsection{Detailed Description}
-Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}\+: $ \vec{v} = (x_, y_, z_) = x_ \vec{i} + y_ \vec{j} + z_ \vec{k} $. 
+Definición de la clase \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classed_1_1Vector3D_a6747bbbfd5d1fac542e46315aed209e5}\label{classed_1_1Vector3D_a6747bbbfd5d1fac542e46315aed209e5}} 
 \index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!Vector3D@{Vector3D}}
 \index{Vector3D@{Vector3D}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
-\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}}
+\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily ed\+::\+Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -143,20 +134,835 @@ Constructor sin argumentos, inicializa cada una de las variables a cero.
 
 \begin{DoxyPostcond}{Postcondition}
 Comprueba que se ha asignado un cero a cada una de las componentes~\newline
- del vector con el siguiente código\+: assert((get1()$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR)~\newline
- and (get2()$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR)~\newline
- and (get3()$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR));
+ del vector con el siguiente código\+: assert((\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR)~\newline
+ and (\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR)~\newline
+ and (\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR));
 \end{DoxyPostcond}
 \begin{DoxyNote}{Note}
 En la Postcondición se compara con la cota de error (C\+O\+T\+A\+\_\+\+E\+R\+R\+OR -\/ 1.\+0e-\/6)~\newline
  para aumentar la precisión del resultado. Será mas relevante en funciones~\newline
- posteriores 
+ posteriores
 \end{DoxyNote}
 \begin{DoxyPrecond}{Precondition}
 -\/ 
 \end{DoxyPrecond}
-\begin{DoxyReturn}{Returns}
+\mbox{\Hypertarget{classed_1_1Vector3D_ab338fbfc5e42af056568727cdfccb0f2}\label{classed_1_1Vector3D_ab338fbfc5e42af056568727cdfccb0f2}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ed\+::\+Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{double const \&}]{x,  }\item[{double const \&}]{y,  }\item[{double const \&}]{z }\end{DoxyParamCaption})}
+
+
+
+Constructor parametrizado, inicializa cada una de las variables a ~\newline
+ las pasadas como parametro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & const \&x → Referencia constante de tipo double (Real) que~\newline
+ almacena el valor X del vector.\\
+\hline
+{\em double} & const \&y → Referencia constante de tipo double (Real) que~\newline
+ almacena el valor Y del vector.\\
+\hline
+{\em double} & const \&z → Referencia constante de tipo double (Real) que~\newline
+ almacena el valor Z del vector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Comprueba que se ha asignado un correctamente las variables pasadas~\newline
+ como parametro assert((std\+::abs((\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}-\/x)$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR))~\newline
+ and (std\+::abs((\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}-\/y)$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR))~\newline
+ and (std\+::abs((\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}-\/z)$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR)));
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Para aumentar la precisión de la postcondición se resta el valor~\newline
+ de la variable asignada con el valor pasado como parametro (el ~\newline
+ resultado de dicha resta sería en valor absoluto), y si este es ~\newline
+ menor que la cota de error (1.\+0e-\/6) se toma como correcta la ~\newline
+ postcondición.
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
 -\/ 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classed_1_1Vector3D_a777ab163dc0be27858fdfd4d4706ff40}\label{classed_1_1Vector3D_a777ab163dc0be27858fdfd4d4706ff40}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{Vector3\+D()}{Vector3D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ed\+::\+Vector3\+D\+::\+Vector3D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Constructor parametrizado, inicializa cada una de las variables a ~\newline
+ a cada una de las respectivas variables del vector pasado como ~\newline
+ argumento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}~\newline
+ que posee el valor de cada una de las componentes del vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+El tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} pertenece al espacio de nombre \char`\"{}ed\char`\"{}
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+Comprueba que se ha asignado un correctamente las variables pasadas~\newline
+ como parametro assert((std\+::abs(\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}-\/v.\+get1())$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR) and (std\+::abs(\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}-\/v.\+get2())$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR) and (std\+::abs(\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}-\/v.\+get3())$<$C\+O\+T\+A\+\_\+\+E\+R\+R\+OR));
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Para aumentar la precisión de la postcondición se resta el valor~\newline
+ de la variable asignada con el valor pasado como parametro (el ~\newline
+ resultado de dicha resta sería en valor absoluto), y si este es ~\newline
+ menor que la cota de error (1.\+0e-\/6) se toma como correcta la ~\newline
+ postcondición.
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classed_1_1Vector3D_af3b622283c86e66467fd6fb766990d3b}\label{classed_1_1Vector3D_af3b622283c86e66467fd6fb766990d3b}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!alfa@{alfa}}
+\index{alfa@{alfa}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{alfa()}{alfa()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::alfa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Observador del angulo que forma el vector en cuestión y el vector~\newline
+ alfa, el cual solamente tiene componentes en X → (1,0,0) Siendo~\newline
+ la operación angulo(\+Vector3\+D(1,0,0)) 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+El módulo debe de ser mayor que 0\+: assert(modulo()$>$0);
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La diferencia entre valor\+Devuelto y angulo(\+Vector3\+D(1,0,0))) en~\newline
+ valor absoluto debe de ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR para que la~\newline
+ condición del aserto sea cierta
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve el angulo que forma el vector en cuestión con el vector~\newline
+ alfa (1,0,0). De tipo double (Real). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a0b41efa0f1d21a4fa730ff522ac3b5c7}\label{classed_1_1Vector3D_a0b41efa0f1d21a4fa730ff522ac3b5c7}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!angulo@{angulo}}
+\index{angulo@{angulo}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{angulo()}{angulo()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::angulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&}]{v }\end{DoxyParamCaption}) const}
+
+
+
+Observador del angulo del vector, que posee la siguiente formula\+:~\newline
+ sqrt(v1$\ast$v1+v2$\ast$v2+v3$\ast$v3) 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}~\newline
+ que posee el valor de cada una de las componentes del vector.~\newline
+ perteneciente al espacio de nombres ed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+$\ast$
+\end{DoxyPrecond}
+\begin{DoxyNote}{Note}
+$\ast$\+Se podría definir como complemento a la postcondición la~\newline
+ la estructura de control if(angulo $<$ -\/1) \&\& if(angulo $>$ 1) ya que~\newline
+ el valor del angulo debe de estar entre \mbox{[}-\/1,1\mbox{]}. En caso de que supere~\newline
+ por alguno de los dos extremos, se asigna el extremo.
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+Se realiza la diferencia entre valor\+Devuelto (angulo) y la ~\newline
+ operación acos(dot\+Product(v)/(\mbox{\hyperlink{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}{modulo()}})$\ast$(v.\+modulo())). Si el~\newline
+ resultado en valor absoluto es menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR, se tomará~\newline
+ como verdadero la condición del aserto.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve el angulo que forma el vector en cuestión con el que se~\newline
+ le ha pasado por Referencia. De tipo double (Real). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a0b9663bbc1b3c3237d0d83583b79597d}\label{classed_1_1Vector3D_a0b9663bbc1b3c3237d0d83583b79597d}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!beta@{beta}}
+\index{beta@{beta}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{beta()}{beta()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::beta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Observador del angulo que forma el vector en cuestión y el vector~\newline
+ beta, el cual solamente tiene componentes en Y → (0,1,0) Siendo~\newline
+ la operación angulo(\+Vector3\+D(0,1,0)) 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+El módulo debe de ser mayor que 0\+: assert(modulo()$>$0);
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La diferencia entre valor\+Devuelto y angulo(\+Vector3\+D(0,1,0))) en~\newline
+ valor absoluto debe de ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR para que la~\newline
+ condición del aserto sea cierta
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve el angulo que forma el vector en cuestión con el vector~\newline
+ beta (0,1,0). De tipo double (Real). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a0e1d07b0544bdce91f8eb2e1281a1613}\label{classed_1_1Vector3D_a0e1d07b0544bdce91f8eb2e1281a1613}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!cross\+Product@{cross\+Product}}
+\index{cross\+Product@{cross\+Product}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{cross\+Product()}{crossProduct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} ed\+::\+Vector3\+D\+::cross\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&}]{v }\end{DoxyParamCaption}) const}
+
+
+
+Observador del producto vectorial del vector actual y el vector~\newline
+ pasado como parametro (v). La operación es~\newline
+ w.\+set1(\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}-\/get3()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}});~\newline
+ w.\+set2(-\/get1()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}+get3()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}});~\newline
+ w.\+set3(\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}-\/get2()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}});. 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}~\newline
+ que posee el valor de cada una de las componentes del vector.~\newline
+ perteneciente al espacio de nombres ed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+El producto escalar del vector actual con el vector W (valor\+Devuelto) ~\newline
+ debe de ser 0 (o menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR).
+
+El producto escalar del vector v (pasado por parámetro) con el vector~\newline
+ W (valor\+Devuelto) debe ser igual a 0 (o menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR).
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+La primera y segunda postcondición se comprueba que W es perpendicular~\newline
+ a los vectores U y V
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+La diferencia entre valor\+Devuelto.\+modulo() y el producto de \mbox{\hyperlink{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}{modulo()}},~\newline
+ v.\+modulo() y sin(angulo(v)) debe de ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve un vector de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} que es el resultado del producto~\newline
+ vectorial de dos vectores. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a849531cfc47ecc3feff503f33ecf76e8}\label{classed_1_1Vector3D_a849531cfc47ecc3feff503f33ecf76e8}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!dot\+Product@{dot\+Product}}
+\index{dot\+Product@{dot\+Product}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{dot\+Product()}{dotProduct()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::dot\+Product (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&}]{v }\end{DoxyParamCaption}) const}
+
+
+
+Observador del producto escalar del vector actual y el vector~\newline
+ pasado como parametro (v). La operación es (\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}+ ~\newline
+ \mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}} + \mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}}) 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}~\newline
+ que posee el valor de cada una de las componentes del vector.~\newline
+ perteneciente al espacio de nombres ed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+La diferencia entre el valor devuelto (pdto\+Escalar) y la ~\newline
+ operación \mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}{get1()}}+get2()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}{get2()}}+get3()$\ast$v.\mbox{\hyperlink{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}{get3()}} debe ~\newline
+ debe ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR, para que la condición del aserto~\newline
+ 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve el angulo que forma el vector en cuestión con el que se~\newline
+ le ha pasado por Referencia. De tipo double (Real). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a8aa810ccaca06f0f0a34871433e7235b}\label{classed_1_1Vector3D_a8aa810ccaca06f0f0a34871433e7235b}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!escribir\+Vector3D@{escribir\+Vector3D}}
+\index{escribir\+Vector3D@{escribir\+Vector3D}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{escribir\+Vector3\+D()}{escribirVector3D()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::escribir\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Muestra por pantalla las componentes del vector con el formato~\newline
+ (x,y,z) 
+
+\begin{DoxyNote}{Note}
+Método declarado const 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_aeb55bfb591e508192eb11e63abbbac19}\label{classed_1_1Vector3D_aeb55bfb591e508192eb11e63abbbac19}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!gamma@{gamma}}
+\index{gamma@{gamma}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{gamma()}{gamma()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::gamma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Observador del angulo que forma el vector en cuestión y el vector~\newline
+ gamma, el cual solamente tiene componentes en Z → (0,0,1). Siendo~\newline
+ la operación angulo(\+Vector3\+D(0,0,1)) 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+El módulo debe de ser mayor que 0\+: assert(modulo()$>$0);
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La diferencia entre valor\+Devuelto y angulo(\+Vector3\+D(0,0,1))) en~\newline
+ valor absoluto debe de ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR para que la~\newline
+ condición del aserto sea cierta
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve el angulo que forma el vector en cuestión con el vector~\newline
+ gamma (0,0,1). De tipo double (Real). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}\label{classed_1_1Vector3D_ac96497e7c082fde19b4998408e4ec36b}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!get1@{get1}}
+\index{get1@{get1}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{get1()}{get1()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::get1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Observador de la componente X del vector. 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+-\/
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Devuelve el valor de la componente X del vector, de tipo double (Real) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}\label{classed_1_1Vector3D_acb66f2ac0cb4f24592698fb317458e35}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!get2@{get2}}
+\index{get2@{get2}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{get2()}{get2()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::get2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Observador de la componente Y del vector. 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+-\/
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Devuelve el valor de la componente Y del vector, de tipo double (Real) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}\label{classed_1_1Vector3D_a50c08e3089bc1b0cd5de77d8f0086cc0}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!get3@{get3}}
+\index{get3@{get3}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{get3()}{get3()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::get3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Observador de la componente Z del vector. 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+-\/
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Devuelve el valor de la componente Z del vector, de tipo double (Real) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a383b32d61696badf77dac30aca5211a3}\label{classed_1_1Vector3D_a383b32d61696badf77dac30aca5211a3}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!leer\+Vector3D@{leer\+Vector3D}}
+\index{leer\+Vector3D@{leer\+Vector3D}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{leer\+Vector3\+D()}{leerVector3D()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::leer\+Vector3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lee desde teclado las componentes del vector. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}\label{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!modulo@{modulo}}
+\index{modulo@{modulo}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{modulo()}{modulo()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::modulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Observador del modulo del vector, que posee la siguiente formula\+:~\newline
+ sqrt(v1$\ast$v1+v2$\ast$v2+v3$\ast$v3). 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const.
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+-\/
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Devuelve el valor del módulo del vector en cuestión. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a02b35a0d961ae10123be25aa6d62f554}\label{classed_1_1Vector3D_a02b35a0d961ae10123be25aa6d62f554}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!mult\+Const@{mult\+Const}}
+\index{mult\+Const@{mult\+Const}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{mult\+Const()}{multConst()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::mult\+Const (\begin{DoxyParamCaption}\item[{double const \&}]{k }\end{DoxyParamCaption})}
+
+
+
+Modifica el vector multiplicando una constante a cada componente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & const \&k → Referencia constante de una constante K\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Comprueba el valor actual del vector con el anterior mas ~\newline
+ el de la constante K. En este caso se resta el valor anterior~\newline
+ mas la constante K, al valor actual quedando un valor que ha de~\newline
+ ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_aea173ccbe7eb56fae15e6c64c693f9f4}\label{classed_1_1Vector3D_aea173ccbe7eb56fae15e6c64c693f9f4}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!mult\+Vect@{mult\+Vect}}
+\index{mult\+Vect@{mult\+Vect}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{mult\+Vect()}{multVect()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::mult\+Vect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Modifica el vector sumando un vector componente a componente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}} & const \&v → Referencia constante de un vector V de tipo~\newline
+ \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Comprueba el valor actual del vector con el anterior mas ~\newline
+ el de la vector v. En este caso se resta el valor anterior~\newline
+ mas el del vector V, al valor actual quedando un valor que ha de~\newline
+ ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a9eb8e6b92c903d0e14dc986fe36b4e26}\label{classed_1_1Vector3D_a9eb8e6b92c903d0e14dc986fe36b4e26}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} ed\+::\+Vector3\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double const \&}]{k }\end{DoxyParamCaption}) const}
+
+
+
+Se multiplican las componentes del vector por una constante K. 
+
+\begin{DoxyNote}{Note}
+Método declarado como const 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em double} & const \&k → Referencia constante de una constante K \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor actual menos el valor anterior multiplicado~\newline
+ por K sea menor que C\+O\+T\+A\+\_\+\+E\+R\+R\+OR 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve otro vector multiplicadas por K cada una de las componentes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_ac68f544bb9dccf1957276751eb9b22ef}\label{classed_1_1Vector3D_ac68f544bb9dccf1957276751eb9b22ef}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} ed\+::\+Vector3\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{v }\end{DoxyParamCaption}) const}
+
+
+
+Prodcuto escalar del vector actual y el pasado como parámetro. 
+
+\begin{DoxyNote}{Note}
+Método declarado como const 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor actual menos el producto escalar~\newline
+ es menor que C\+O\+T\+A\+\_\+\+E\+R\+R\+OR 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve otro vector multiplicadas por K cada una de las componentes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a8bd997d7786abcc49ae5f2f6f4e44db6}\label{classed_1_1Vector3D_a8bd997d7786abcc49ae5f2f6f4e44db6}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator+@{operator+}}
+\index{operator+@{operator+}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} ed\+::\+Vector3\+D\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{v }\end{DoxyParamCaption}) const}
+
+
+
+Suma el vector V al vector actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Método declarado como const 
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor actual de la componente es igual a la~\newline
+ suma de la componente anterior mas la componente del vector~\newline
+ pasado como parámetro. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Vector resultante de la suma del vector actual y el pasado ~\newline
+ como parametro 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a0b5d720dcaf6e5f4211179ee973b0ae8}\label{classed_1_1Vector3D_a0b5d720dcaf6e5f4211179ee973b0ae8}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator+@{operator+}}
+\index{operator+@{operator+}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} ed\+::\+Vector3\+D\+::operator+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve otro vector que es una copia del vector actual. 
+
+\begin{DoxyNote}{Note}
+Método declarado como const 
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que coincidan el valor del get() con el valor de las~\newline
+ componentes del vector\+Copia. Esta acción se realiza con la resta~\newline
+ de ambas componentes y comprobando que sea menor que C\+O\+T\+A\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve otro vector que es una copia del vector actual 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_ab7fb56356289e2cd6c96700dcf35607c}\label{classed_1_1Vector3D_ab7fb56356289e2cd6c96700dcf35607c}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} ed\+::\+Vector3\+D\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{v }\end{DoxyParamCaption}) const}
+
+
+
+Resta el vector V al vector actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Método declarado como const 
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor actual de la componente es igual a la~\newline
+ resta de la componente anterior mas la componente del vector~\newline
+ pasado como parámetro. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Vector resultante de la resta del vector actual y el pasado ~\newline
+ como parametro 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_aab00bcab59786a685b95fb12f8909e28}\label{classed_1_1Vector3D_aab00bcab59786a685b95fb12f8909e28}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} ed\+::\+Vector3\+D\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve otro vector que es una copia del vector actual pero con~\newline
+ signo negativo. 
+
+\begin{DoxyNote}{Note}
+Método declarado como const 
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que coincidan el valor del get() con el valor de las~\newline
+ componentes del vector\+Copia. Esta acción se realiza con la suma~\newline
+ de ambas componentes y comprobando que sea menor que C\+O\+T\+A\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve otro vector multiplicadas por -\/1 cada una de las componentes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_afc9b1243cc26a4f20cf6e05f7e4dd8cc}\label{classed_1_1Vector3D_afc9b1243cc26a4f20cf6e05f7e4dd8cc}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator=@{operator=}}
+\index{operator=@{operator=}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \& ed\+::\+Vector3\+D\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Asigna el vector V al vector actual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor actual coincide con el del vector pasado ~\newline
+ como parametro 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Puntero al vector actual ($\ast$this) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a09cbd7f5d848a95b652be1a66703710f}\label{classed_1_1Vector3D_a09cbd7f5d848a95b652be1a66703710f}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator==@{operator==}}
+\index{operator==@{operator==}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ed\+::\+Vector3\+D\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&}]{v }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba si el vector actual y el vector V son iguales. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que las componentes sean iguales una a una 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE en caso de que sean iguales F\+A\+L\+SE en caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a4c38081a03f4294dbfa3aee531fe5a73}\label{classed_1_1Vector3D_a4c38081a03f4294dbfa3aee531fe5a73}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!operator$^\wedge$@{operator$^\wedge$}}
+\index{operator$^\wedge$@{operator$^\wedge$}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{operator$^\wedge$()}{operator^()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} ed\+::\+Vector3\+D\+::operator$^\wedge$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{v }\end{DoxyParamCaption}) const}
+
+
+
+Se realiza el producto vectorial del vector actual y el vector ~\newline
+ pasado por parametro. 
+
+\begin{DoxyNote}{Note}
+Método declarado como const 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+El producto escalar del vector actual con el vector W (valor\+Devuelto) ~\newline
+ debe de ser 0 (o menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR). 
+
+El producto escalar del vector v (pasado por parámetro) con el vector~\newline
+ W (valor\+Devuelto) debe ser igual a 0 (o menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR). 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+La primera y segunda postcondición se comprueba que W es perpendicular~\newline
+ a los vectores U y V 
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+La diferencia entre valor\+Devuelto.\+modulo() y el producto de \mbox{\hyperlink{classed_1_1Vector3D_a9db1b9e9d7634efeb88f60130283bc9a}{modulo()}},~\newline
+ v.\+modulo() y sin(angulo(v)) debe de ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve un vector de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} que es el resultado del ~\newline
+ producto vectorial de dos vectores 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a2063f0cdfdb6a34e4f426a1f247a4459}\label{classed_1_1Vector3D_a2063f0cdfdb6a34e4f426a1f247a4459}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!producto\+Mixto@{producto\+Mixto}}
+\index{producto\+Mixto@{producto\+Mixto}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{producto\+Mixto()}{productoMixto()}}
+{\footnotesize\ttfamily double ed\+::\+Vector3\+D\+::producto\+Mixto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{v,  }\item[{\mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}} const \&}]{w }\end{DoxyParamCaption}) const}
+
+
+
+Observador del producto escalar del vector actual con el vector~\newline
+ obtenido al calcular el producto vectorial de otros dos vectores~\newline
+ con la siguiente formula → (u$\ast$(v$^\wedge$w)) 
+
+\begin{DoxyNote}{Note}
+Observador declarado como const
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}} & const \&v → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}~\newline
+ que posee el valor de cada una de las componentes del vector.~\newline
+ perteneciente al espacio de nombres ed\\
+\hline
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}} & const \&w → Referencia constante de tipo \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}~\newline
+ que posee el valor de cada una de las componentes del vector.~\newline
+ perteneciente al espacio de nombres ed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Comprueba que el valor de pdto\+Mixto menos el producto vectorial~\newline
+ de V con W sea menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR. Condición que dará como ~\newline
+ cierta la condición del aserto. Con el siguiente fragmento ~\newline
+ de código → pdto\+Mixto-\/dot\+Product(v.\+cross\+Product(w)
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Devuelve el resultado de calcular el producto escalar del vector~\newline
+ actual con el vector obtenido al calcular el producto vectorial~\newline
+ de otros dos vectores. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_acfdf541551fe60c3d01f4415989f20c2}\label{classed_1_1Vector3D_acfdf541551fe60c3d01f4415989f20c2}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!set1@{set1}}
+\index{set1@{set1}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{set1()}{set1()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::set1 (\begin{DoxyParamCaption}\item[{double const \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Modificador de la componente X del vector → X\+\_\+ = x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & const \&x → Referencia constante de la componente X del vector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor asignado a X\+\_\+ es el mismo que el valor~\newline
+ pasado como parámetro. El valor absoluto de la diferencia entre~\newline
+ el valor retornado por el observador y el pasado por parámetro~\newline
+ debe de ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR para cumplir la condición del ~\newline
+ aserto.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a9148554ef7b54d5f06f1938791ff9e6a}\label{classed_1_1Vector3D_a9148554ef7b54d5f06f1938791ff9e6a}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!set2@{set2}}
+\index{set2@{set2}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{set2()}{set2()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::set2 (\begin{DoxyParamCaption}\item[{double const \&}]{y }\end{DoxyParamCaption})}
+
+
+
+Modificador de la componente Y del vector → Y\+\_\+ = y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & const \&y → Referencia constante de la componente Y del vector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor asignado a Y\+\_\+ es el mismo que el valor~\newline
+ pasado como parámetro. El valor absoluto de la diferencia entre~\newline
+ el valor retornado por el observador y el pasado por parámetro~\newline
+ debe de ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR para cumplir la condición del ~\newline
+ aserto.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a6c658249a001608a6e8c8e8e249d3fb3}\label{classed_1_1Vector3D_a6c658249a001608a6e8c8e8e249d3fb3}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!set3@{set3}}
+\index{set3@{set3}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{set3()}{set3()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::set3 (\begin{DoxyParamCaption}\item[{double const \&}]{z }\end{DoxyParamCaption})}
+
+
+
+Modificador de la componente Z del vector → Z\+\_\+ = z. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & const \&z → Referencia constante de la componente Z del vector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se comprueba que el valor asignado a Z\+\_\+ es el mismo que el valor~\newline
+ pasado como parámetro. El valor absoluto de la diferencia entre~\newline
+ el valor retornado por el observador y el pasado por parámetro~\newline
+ debe de ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR para cumplir la condición del ~\newline
+ aserto.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a38a5c63c2926e9685d040eab39e23c60}\label{classed_1_1Vector3D_a38a5c63c2926e9685d040eab39e23c60}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!sum\+Const@{sum\+Const}}
+\index{sum\+Const@{sum\+Const}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{sum\+Const()}{sumConst()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::sum\+Const (\begin{DoxyParamCaption}\item[{double const \&}]{k }\end{DoxyParamCaption})}
+
+
+
+Modifica el vector sumando una constante a cada componente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & const \&k → Referencia constante de una constante K\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Comprueba el valor actual del vector con el anterior mas ~\newline
+ el de la constante K. En este caso se resta el valor anterior~\newline
+ mas la constante K, al valor actual quedando un valor que ha de~\newline
+ ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classed_1_1Vector3D_a1b33db7851b02ee4a00aee17262af20a}\label{classed_1_1Vector3D_a1b33db7851b02ee4a00aee17262af20a}} 
+\index{ed\+::\+Vector3D@{ed\+::\+Vector3D}!sum\+Vect@{sum\+Vect}}
+\index{sum\+Vect@{sum\+Vect}!ed\+::\+Vector3D@{ed\+::\+Vector3D}}
+\subsubsection{\texorpdfstring{sum\+Vect()}{sumVect()}}
+{\footnotesize\ttfamily void ed\+::\+Vector3\+D\+::sum\+Vect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}} const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Modifica el vector sumando un vector componente a componente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classed_1_1Vector3D}{ed\+::\+Vector3D}}} & const \&v → Referencia constante de un vector V de tipo~\newline
+ \mbox{\hyperlink{classed_1_1Vector3D}{Vector3D}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Comprueba el valor actual del vector con el anterior mas ~\newline
+ el de la vector V. En este caso se resta el valor anterior~\newline
+ mas el del vector V, al valor actual quedando un valor que ha de~\newline
+ ser menor que la C\+O\+T\+A\+\_\+\+E\+R\+R\+OR.
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+void 
 \end{DoxyReturn}
 
 

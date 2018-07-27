@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['vector3d',['Vector3D',['../classed_1_1Vector3D.html',1,'ed::Vector3D'],['../classed_1_1Vector3D.html#a6747bbbfd5d1fac542e46315aed209e5',1,'ed::Vector3D::Vector3D()']]],
-  ['vector3d_2ecpp',['Vector3D.cpp',['../Vector3D_8cpp.html',1,'']]],
-  ['vector3d_2ehpp',['Vector3D.hpp',['../Vector3D_8hpp.html',1,'']]]
+  ['onblack',['ONBLACK',['../macros_8hpp.html#a78ab50607348711673d4c84c345073fd',1,'macros.hpp']]],
+  ['onblue',['ONBLUE',['../macros_8hpp.html#aa5d9b691aa1da18cdbe4e3c9a2c96d32',1,'macros.hpp']]],
+  ['oncyan',['ONCYAN',['../macros_8hpp.html#ae1e6a990d48427e88fa82041b34cc0a4',1,'macros.hpp']]],
+  ['ongreen',['ONGREEN',['../macros_8hpp.html#a097b673ada180f43497d977088e43785',1,'macros.hpp']]],
+  ['oniblack',['ONIBLACK',['../macros_8hpp.html#a53063f8cd812337752a723dbccf71b46',1,'macros.hpp']]],
+  ['oniblue',['ONIBLUE',['../macros_8hpp.html#a5bd2ac65205d17160c8940db16bc935f',1,'macros.hpp']]],
+  ['onicyan',['ONICYAN',['../macros_8hpp.html#a467f3f4db308276a685f6b32923e3341',1,'macros.hpp']]],
+  ['onigreen',['ONIGREEN',['../macros_8hpp.html#aa6f04e70878ba353a47f303387d83111',1,'macros.hpp']]],
+  ['onipurple',['ONIPURPLE',['../macros_8hpp.html#a80dccced6d46bd167d8270b706e21503',1,'macros.hpp']]],
+  ['onired',['ONIRED',['../macros_8hpp.html#af00d9b03428f85da8be19c43fce976f3',1,'macros.hpp']]],
+  ['oniwhite',['ONIWHITE',['../macros_8hpp.html#ad99b90ff65aa3c11359065f0278cc6a4',1,'macros.hpp']]],
+  ['oniyellow',['ONIYELLOW',['../macros_8hpp.html#a891e29c132b298205f44f81796cb7fbf',1,'macros.hpp']]],
+  ['onpurple',['ONPURPLE',['../macros_8hpp.html#aebfeb2f335b87e659719e1cd8507f852',1,'macros.hpp']]],
+  ['onred',['ONRED',['../macros_8hpp.html#a776ab7f13e0834a53f3a2e40e4f1454c',1,'macros.hpp']]],
+  ['onwhite',['ONWHITE',['../macros_8hpp.html#a79ae30b852de243cee48fcb8afc2eb4c',1,'macros.hpp']]],
+  ['onyellow',['ONYELLOW',['../macros_8hpp.html#aa5c1734688b603c13c5b1c252b47ad5d',1,'macros.hpp']]],
+  ['operator_2a',['operator*',['../classed_1_1Vector3D.html#a9eb8e6b92c903d0e14dc986fe36b4e26',1,'ed::Vector3D::operator*(double const &amp;k) const'],['../classed_1_1Vector3D.html#ac68f544bb9dccf1957276751eb9b22ef',1,'ed::Vector3D::operator*(Vector3D const &amp;v) const'],['../Vector3D_8cpp.html#a66a7ac13192629b7ea7f1f5461209433',1,'ed::operator*()']]],
+  ['operator_2b',['operator+',['../classed_1_1Vector3D.html#a8bd997d7786abcc49ae5f2f6f4e44db6',1,'ed::Vector3D::operator+(Vector3D const &amp;v) const'],['../classed_1_1Vector3D.html#a0b5d720dcaf6e5f4211179ee973b0ae8',1,'ed::Vector3D::operator+() const']]],
+  ['operator_2d',['operator-',['../classed_1_1Vector3D.html#ab7fb56356289e2cd6c96700dcf35607c',1,'ed::Vector3D::operator-(Vector3D const &amp;v) const'],['../classed_1_1Vector3D.html#aab00bcab59786a685b95fb12f8909e28',1,'ed::Vector3D::operator-() const']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../Vector3D_8cpp.html#aca80d4d6f66fd5c5c36b0fbb8fcbdb8b',1,'ed']]],
+  ['operator_3d',['operator=',['../classed_1_1Vector3D.html#afc9b1243cc26a4f20cf6e05f7e4dd8cc',1,'ed::Vector3D']]],
+  ['operator_3d_3d',['operator==',['../classed_1_1Vector3D.html#a09cbd7f5d848a95b652be1a66703710f',1,'ed::Vector3D']]],
+  ['operator_3e_3e',['operator&gt;&gt;',['../Vector3D_8cpp.html#a7f727a46126799348a421c737f50008e',1,'ed']]],
+  ['operator_5e',['operator^',['../classed_1_1Vector3D.html#a4c38081a03f4294dbfa3aee531fe5a73',1,'ed::Vector3D']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../principal_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'principal.cpp']]],
-  ['menu',['menu',['../funcionesAuxiliares_8hpp.html#a546d1699e6a9b8dd8d3aa52978a38f06',1,'ed']]]
+  ['alfa',['alfa',['../classed_1_1Vector3D.html#af3b622283c86e66467fd6fb766990d3b',1,'ed::Vector3D']]],
+  ['angulo',['angulo',['../classed_1_1Vector3D.html#a0b41efa0f1d21a4fa730ff522ac3b5c7',1,'ed::Vector3D']]]
 ];
