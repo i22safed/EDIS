@@ -59,17 +59,37 @@ class Provincia
 
 	//!	\name Constructor
 
+	Provincia(std::string nombre, int codigo=0);
+
 
 	/////////////////////////////////////////////////////////////////////
 
-	//!	\name Observadores
+	//!	\name Observadores → observadores como const
 
+	std::string getNombre()const{
+		return _nombre;
+	};
+
+
+	int getCodigo()const{
+		return _codigo;
+	};
+
+	bool hayMunicipios()const;
+
+	int getNumeroMunicipios()const;
+
+	bool existeMunicipio(std::string nombre)const;
+
+	Municipio getMunicipio(std::string nombre)const;
 
 	/////////////////////////////////////////////////////////////////////
 
 	//!	\name Modificadores
 
+	void setNombre(std::string nombre);
 
+	void setCodigo(int codigo);
 
 	/////////////////////////////////////////////////////////////////////
 
