@@ -1,8 +1,8 @@
 /*!
 	\file   ListaOrdenadaMunicipiosInterfaz.hpp
 	\brief  Clase abstracta de una lista enlazada y ordenada de Municipios
-	\author
-	\date
+	\author David Sanchez Fernandez
+	\date 09/04/2018
 	\version 1.0
 
 */
@@ -12,17 +12,6 @@
 
 // Definición de la clase del campo informativo del nodo de la lista
 #include "Municipio.hpp"
-
-
-/////////////////////////////////////////////////////////////////////////////////////
-// IMPORTANTE
-
-// SE HAN COMENTADO ALGUNAS FUNCIONES PARA QUE NO SE GENEREN ERRORES DE COMPILACIÓN
-
-// AL QUITAR EL COMENTARIO, TAMBIÉN SE DEBE CODIFICAR LA FUNCIÓN EN LA CLASE HEREDERA
-/////////////////////////////////////////////////////////////////////////////////////
-
-
 
 /*!
 	\namespace ed
@@ -65,7 +54,7 @@ namespace ed {
 		\pre    La lista no está vacía
 		\return Verdadero, si el cursor está situado en la cabeza; falso en caso contrario
 	*/
-// 		virtual bool isFirstItem() const = 0;
+ 		virtual bool isFirstItem() const = 0;
 
 
     /*!
@@ -75,7 +64,7 @@ namespace ed {
 		\pre    La lista no está vacía
 		\return true, si el cursor está situado al final de la lista; false, en caso contrario
     */
-//		virtual bool isLastItem() const = 0;
+		virtual bool isLastItem() const = 0;
 
 
     /*!
@@ -85,7 +74,7 @@ namespace ed {
 		\pre    La lista no está vacía
 		\return Una referencia constante al municipio indicado por el cursor
     */
-//		virtual ed::Municipio const & getCurrentItem() const = 0;
+		virtual ed::Municipio const & getCurrentItem() const = 0;
 
 
     /*!
@@ -96,7 +85,7 @@ namespace ed {
 		\pre    El cursor no está situado en el primer nodo
 		\return Una referencia al municipio situado en el nodo previo al indicado por el cursor
     */
-//		virtual  ed::Municipio const & getPreviousItem() const = 0;
+		virtual  ed::Municipio const & getPreviousItem() const = 0;
 
 
     /*!
@@ -107,7 +96,7 @@ namespace ed {
 		\pre 	El cursor no está situado en el último nodo
         \return Una referencia al municipio situado en el nodo siguiente al indicado por el cursor
     */
-//		virtual ed::Municipio const & getNextItem() const = 0;
+		virtual ed::Municipio const & getNextItem() const = 0;
 
 
 	//!  \name Modificadores públicos
@@ -120,7 +109,7 @@ namespace ed {
 		\return void
 		\sa		gotoLast(), gotoPrevious(), gotoNext()
       */
-//      virtual void gotoHead() = 0;
+      virtual void gotoHead() = 0;
 
 
       /*!
@@ -131,7 +120,7 @@ namespace ed {
 		\return void
 		\sa		gotoHead(), gotoPrevious(), gotoNext()
       */
-//      virtual void gotoLast() = 0;
+      virtual void gotoLast() = 0;
 
 
       /*!
@@ -143,7 +132,7 @@ namespace ed {
 		\return void
 		\sa		gotoHead(), gotoLast(), gotoNext()
       */
-//      virtual void gotoPrevious() = 0;
+      virtual void gotoPrevious() = 0;
 
 	/*!
 		\brief  Coloca el cursor en la posición siguiente de la lista
@@ -154,7 +143,7 @@ namespace ed {
 		\return void
 		\sa		gotoHead(), gotoLast(), gotoPrevious()
 	*/
-//      virtual void gotoNext() = 0;
+      virtual void gotoNext() = 0;
 
 
 
@@ -166,7 +155,7 @@ namespace ed {
     \post   retVal==false implica que getCurrentItem > item o isLastItem() == true
 		\return true, si el municipio está en la lista; false, en caso contrario
     */
-//      virtual bool find(ed::Municipio const & item) = 0;
+      virtual bool find(ed::Municipio const & item) = 0;
 
 
 	/*!
@@ -177,7 +166,7 @@ namespace ed {
  		\post  getCurrentItem() == item
 		\sa    remove()
     */
-// 		virtual void insert(ed::Municipio const & item) = 0;
+ 		virtual void insert(ed::Municipio const & item) = 0;
 
 
 	/*!
@@ -195,7 +184,7 @@ namespace ed {
            isEmpty()==verdadero o old.getNextItem()==getCurrentItem() y isFirstItem()==verdadero
 		\sa    insert()
      */
-//		virtual void remove() = 0;
+		virtual void remove() = 0;
 
 }; // Fin de la clase ListaOrdenadaMunicipiosInterfaz
 
