@@ -1,4 +1,4 @@
-/*! 
+/*!
    \file  Medicion.cpp
    \brief Fichero que contiene el código de las funciones de la clase Medicion
 */
@@ -23,20 +23,93 @@
 
 namespace ed{
 
-// Sobrecarga del operador de salida
-ostream &operator<<(ostream &stream, ed::Medicion const &medicion)
-{
-  // COMPLETAR
+bool ed::Medicion::operator == (Medicion const &medicion) const{
 
-  return stream;
+  bool valorDevuelto = false;
+
+  if(getFecha() == medicion.getFecha()){
+    valorDevuelto = true;
+  }else{
+    valorDevuelto = false;
+  }
+
+  #ifndef NDEBUG
+    assert(valorDevuelto == (getFecha() == medicion.getFecha()));
+  #endif
+
+  return valorDevuelto;
+
+}
+
+ed::Medicion ed::Medicion::operator = (Medicion const &medicion){
+
+    ed::Medicion m;
+
+    m.setFecha(medicion.getFecha());
+    m.setPrecipitacion(medicion.getPrecipitacion());
+
+    #ifndef NDEBUG
+      assert(m.getFecha() == medicion.getFecha());
+      assert(std::abs(m.getPrecipitacion() - medicion.getPrecipitacion()) < COTA_ERROR);
+    #endif
+
+    return m;
+
+}
+
+void ed::Medicion::leerMedicion(){
+
+  double p;
+  Fecha fecha;
+  fecha.leerFecha();
+
+  std::cout << "Precipitacion → ";
+  std::cin >> p;
+
+  setFecha(fecha);
+  setPrecipitacion(p);
+}
+
+void ed::Medicion::escribirMedicion()const{
+
+  std::cout << getFecha() << " "
+            << getPrecipitacion() << std::endl;
+
+}
+
+
+
+// Sobrecarga del operador de salida
+ostream &operator<<(ostream &o, ed::Medicion const &medicion){
+
+  o << medicion.getFecha();
+  o << " ";
+  o << medicion.getPrecipitacion();
+  o << "\n";
+
+  return o;
 }
 
 // Sobrecarga del operador de entrada
-istream &operator>>(istream &stream, ed::Medicion &medicion)
-{
- // COMPLETAR
+istream &operator>>(istream &i, ed::Medicion &medicion){
 
-  return stream;
-} 
+  std::string cadena;
+  Fecha f;
+
+  std::getline(i,cadena,'-');
+  f.setDia(atoi(cadena.c_str()));
+  std::getline(i,cadena,'-');
+  f.setMes(atoi(cadena.c_str()));
+  std::getline(i,cadena,'-');
+  f.setAgno(atoi(cadena.c_str()));
+
+  medicion.setFecha(f);
+
+  std::getline(i,cadena,'\n');
+
+  medicion.setPrecipitacion(atof(cadena.c_str())); // Cast a dato tipo real
+
+  return i;
+}
 
 } // Fin del espacio de nombres ed
